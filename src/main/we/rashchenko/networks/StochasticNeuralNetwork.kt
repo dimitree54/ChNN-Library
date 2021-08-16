@@ -8,6 +8,12 @@ import we.rashchenko.neurons.Neuron
 import we.rashchenko.utils.ExponentialMovingAverage
 import we.rashchenko.utils.randomIds
 
+/**
+ * Main implementation of the [NeuralNetworkWithInput].
+ * It is [NeuralNetwork] optimised to work with sparse activation by skipping some [Neuron] touches.
+ * It is called stochastic because it may change behaviour based on the order of [Neuron] calls.
+ * Note that [StochasticNeuralNetwork] is used for ChNN contest and that [Neuron] documentation considers that.
+ */
 class StochasticNeuralNetwork : NeuralNetworkWithInput {
 	private val neuronsWithID = mutableMapOf<Int, Neuron>()
 	override val neuronIDs: Collection<Int>

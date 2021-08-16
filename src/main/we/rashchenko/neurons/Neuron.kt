@@ -4,6 +4,7 @@ import we.rashchenko.base.Activity
 import we.rashchenko.base.Feedback
 import we.rashchenko.networks.Evolution
 import we.rashchenko.networks.NeuralNetwork
+import we.rashchenko.networks.StochasticNeuralNetwork
 import we.rashchenko.networks.controllers.NeuralNetworkController
 
 
@@ -13,6 +14,14 @@ import we.rashchenko.networks.controllers.NeuralNetworkController
  * but the ones targeted on increasing incoming [Feedback] (by "pleasing" neighbour neurons) have more chances to
  * survive during [Evolution]. Before developing your [Neuron] implementation check [NeuralNetwork] pipeline
  * documentation to understand order in which [Neuron] function called.
+ * Note that documentation for the [Neuron] considers that [StochasticNeuralNetwork] or [NeuralNetwork] with similar
+ *  rules (optimised for sparse activations) used.
+ * Examples of such prejudice is that [Neuron] it touched until the first activation or that [update] is called after
+ *  [touch].
+ * We use that assumption because [StochasticNeuralNetwork] is the only implementation of the [NeuralNetwork] so far
+ *  and to help participants of the ChNN contest to implement effective [Neuron] for [StochasticNeuralNetwork].
+ * But if you are going to use the different [NeuralNetwork] and think that such assumptions should not be in
+ *  documentation please open an issue to discuss that.
  */
 interface Neuron : Activity {
 	/**
