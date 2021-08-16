@@ -1,7 +1,8 @@
-package we.rashchenko.neurons
+package we.rashchenko.neurons.inputs
 
 import we.rashchenko.base.Feedback
 import we.rashchenko.networks.NeuralNetwork
+import we.rashchenko.neurons.Neuron
 
 /**
  * It is special kind of neuron that is controlled from outside of [NeuralNetwork], so it does not consider

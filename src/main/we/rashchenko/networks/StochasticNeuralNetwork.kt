@@ -3,7 +3,7 @@ package we.rashchenko.networks
 import we.rashchenko.base.Feedback
 import we.rashchenko.base.getFeedback
 import we.rashchenko.base.update
-import we.rashchenko.neurons.InputNeuron
+import we.rashchenko.neurons.inputs.InputNeuron
 import we.rashchenko.neurons.Neuron
 import we.rashchenko.utils.ExponentialMovingAverage
 import we.rashchenko.utils.randomIds

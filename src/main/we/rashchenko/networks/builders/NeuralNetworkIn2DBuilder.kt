@@ -4,7 +4,7 @@ import we.rashchenko.base.Activity
 import we.rashchenko.base.Feedback
 import we.rashchenko.environments.Environment
 import we.rashchenko.networks.NeuralNetworkWithInput
-import we.rashchenko.neurons.MirroringNeuron
+import we.rashchenko.neurons.inputs.MirroringNeuron
 import we.rashchenko.neurons.Neuron
 import we.rashchenko.neurons.NeuronsSampler
 import we.rashchenko.utils.KNearestVectorsConnectionSampler

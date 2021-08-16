@@ -1,6 +1,6 @@
 package we.rashchenko.networks
 
-import we.rashchenko.neurons.InputNeuron
+import we.rashchenko.neurons.inputs.InputNeuron
 
 interface NeuralNetworkWithInput : NeuralNetwork {
 	val inputNeuronIDs: Collection<Int>
