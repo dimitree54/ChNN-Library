@@ -2,7 +2,7 @@ package we.rashchenko.neurons
 
 import we.rashchenko.base.Activity
 import we.rashchenko.base.Feedback
-import we.rashchenko.networks.Evolution
+import we.rashchenko.networks.builders.Evolution
 import we.rashchenko.networks.NeuralNetwork
 import we.rashchenko.networks.StochasticNeuralNetwork
 import we.rashchenko.networks.controllers.NeuralNetworkController
