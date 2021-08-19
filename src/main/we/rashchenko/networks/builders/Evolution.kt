@@ -26,11 +26,12 @@ class Evolution(
 	private val neuronsForSelection: Int,
 	private val warningsBeforeKill: Int,
 	private val selectionProbability: Double
-): Ticking, NeuralNetworkBuilder by builder{
+) : Ticking, NeuralNetworkBuilder by builder {
 	private val warnings = mutableMapOf<Int, Int>()
 	private val random = Random()
 	override var timeStep: Long = 0
 		private set
+
 	override fun tick() {
 		if (random.nextDouble() > selectionProbability) {
 			return

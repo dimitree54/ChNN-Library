@@ -3,9 +3,9 @@ package we.rashchenko.networks.builders
 import we.rashchenko.base.Activity
 import we.rashchenko.base.ObservableActivities
 import we.rashchenko.networks.NeuralNetworkWithInput
-import we.rashchenko.neurons.inputs.MirroringNeuron
 import we.rashchenko.neurons.Neuron
 import we.rashchenko.neurons.NeuronsSampler
+import we.rashchenko.neurons.inputs.MirroringNeuron
 import we.rashchenko.utils.KNearestVectorsConnectionSampler
 import we.rashchenko.utils.RandomPositionSampler
 import we.rashchenko.utils.Vector2
@@ -14,7 +14,7 @@ import we.rashchenko.utils.randomIds
 
 /**
  * Builder that places [NeuralNetworkWithInput] into 2D space.
- * On each [addNeuron] coordinate for it sampled randomly from [0,1] and neuron
+ * On each [addNeuron] coordinate for this [Neuron] sampled randomly from [0,1] and neuron
  *  connections sampled based on the distance between that coordinates.
  */
 class NeuralNetworkIn2DBuilder(
@@ -131,8 +131,8 @@ class NeuralNetworkIn2DBuilder(
 	fun getPosition(neuronID: Int): Vector2? = nnIDsWithPosition[neuronID]
 
 	private var lastSamplerUpdateTimeStep = -1L
-	private fun sample(id: Int): Neuron{
-		if (lastSamplerUpdateTimeStep != neuralNetwork.timeStep){
+	private fun sample(id: Int): Neuron {
+		if (lastSamplerUpdateTimeStep != neuralNetwork.timeStep) {
 			lastSamplerUpdateTimeStep = neuralNetwork.timeStep
 			updateSampler()
 		}
@@ -140,7 +140,7 @@ class NeuralNetworkIn2DBuilder(
 	}
 
 	private fun updateSampler() {
-		nnIDs2builderIDs.forEach{ (neuronID, builderID) ->
+		nnIDs2builderIDs.forEach { (neuronID, builderID) ->
 			neuronsSampler.reportFeedback(builderID, neuralNetwork.getFeedback(neuronID)!!)
 		}
 	}

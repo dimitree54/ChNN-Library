@@ -1,6 +1,7 @@
 package we.rashchenko.networks
 
 import we.rashchenko.base.Feedback
+import we.rashchenko.networks.builders.Evolution
 import we.rashchenko.networks.controllers.NeuralNetworkController
 import we.rashchenko.neurons.ControlledNeuron
 import we.rashchenko.neurons.Neuron

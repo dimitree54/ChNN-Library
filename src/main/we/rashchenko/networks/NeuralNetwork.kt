@@ -2,6 +2,7 @@ package we.rashchenko.networks
 
 import we.rashchenko.base.Feedback
 import we.rashchenko.base.Ticking
+import we.rashchenko.networks.builders.Evolution
 import we.rashchenko.neurons.Neuron
 
 /**

@@ -1,6 +1,5 @@
 package we.rashchenko.utils
 
-import we.rashchenko.utils.collections.WorstN
 import java.lang.Integer.min
 
 /**

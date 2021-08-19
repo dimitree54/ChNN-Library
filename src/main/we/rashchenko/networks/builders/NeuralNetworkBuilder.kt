@@ -1,6 +1,5 @@
 package we.rashchenko.networks.builders
 
-import we.rashchenko.environments.Environment
 import we.rashchenko.networks.NeuralNetwork
 import we.rashchenko.neurons.Neuron
 

@@ -10,7 +10,7 @@ import we.rashchenko.neurons.inputs.InputNeuron
  * [NeuralNetworkWithInput] builder. Extends [NeuralNetworkBuilder] with ability to connect [Environment] or any other
  *  [ObservableActivities].
  */
-interface NeuralNetworkWithInputBuilder: NeuralNetworkBuilder {
+interface NeuralNetworkWithInputBuilder : NeuralNetworkBuilder {
 	/**
 	 * [NeuralNetworkWithInput] that [NeuralNetworkWithInputBuilder] builds.
 	 */
