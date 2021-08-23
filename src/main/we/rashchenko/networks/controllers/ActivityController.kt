@@ -8,6 +8,10 @@ import we.rashchenko.utils.clip
 import kotlin.math.abs
 import kotlin.math.sqrt
 
+/**
+ * [NeuralNetworkController] that controls neuron average activity to be close to the average.
+ * Assigns penalty for neurons that far from the average and encourage ones that close to the average.
+ */
 class ActivityController : NeuralNetworkController {
 	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>, timeStep: Long): List<Feedback> {
 		neurons.map { it.getAverageActivity() }.toDoubleArray().let { activities ->

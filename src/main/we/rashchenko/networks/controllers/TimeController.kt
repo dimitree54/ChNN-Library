@@ -7,6 +7,12 @@ import we.rashchenko.utils.ZERO_DIV_EPS
 import we.rashchenko.utils.clip
 import kotlin.math.sqrt
 
+/**
+ * [NeuralNetworkController] that controls [ControlledNeuron.averageFeedbackTime] penalizing neurons that slower than
+ *  average and encouraging ones that faster.
+ * Note that there is a [problem][https://github.com/dimitree54/ChNN-Library/issues/13] that adds bias against
+ *  old neurons compared to newly created.
+ */
 class TimeController : NeuralNetworkController {
 	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>, timeStep: Long): List<Feedback> {
 		neurons.map { it.getAverageTime() }.toDoubleArray().let { times ->
