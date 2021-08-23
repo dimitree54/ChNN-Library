@@ -1,7 +1,5 @@
 package we.rashchenko.base
 
-import we.rashchenko.utils.ExponentialMovingAverage
-
 /**
  * Wrapper for double feedback to make sure it meets limitations.
  * feedback > 0 is positive, for high-quality neurons;
