@@ -25,12 +25,3 @@ data class Feedback(val value: Double) : Comparable<Feedback> {
 		return value.compareTo(other.value)
 	}
 }
-
-fun ExponentialMovingAverage.update(feedback: Feedback) {
-	return this.update(feedback.value)
-}
-
-fun ExponentialMovingAverage.getFeedback(): Feedback {
-	return Feedback(value)
-}
-

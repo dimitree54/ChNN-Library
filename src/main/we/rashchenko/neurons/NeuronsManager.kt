@@ -1,7 +1,6 @@
 package we.rashchenko.neurons
 
 import we.rashchenko.base.Feedback
-import we.rashchenko.base.update
 import we.rashchenko.utils.ExponentialMovingAverage
 import we.rashchenko.utils.softmax
 import java.util.*
@@ -49,7 +48,7 @@ class NeuronsManager : NeuronsSampler {
 	override fun reportFeedback(id: Int, feedback: Feedback) {
 		val sampler = neuronSamplerMap[id] ?: throw IllegalArgumentException("Unknown neuron")
 		sampler.reportFeedback(id, feedback)
-		samplersScore[sampler]?.update(feedback) ?: throw Exception("Invalid manager state")
+		samplersScore[sampler]?.update(feedback.value) ?: throw Exception("Invalid manager state")
 		updateRanges()
 	}
 
