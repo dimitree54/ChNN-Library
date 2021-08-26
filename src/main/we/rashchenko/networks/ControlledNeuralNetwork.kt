@@ -10,21 +10,26 @@ import java.util.*
 
 /**
  * That [NeuralNetwork] is a wrapper for any other [baseNeuralNetwork] that wraps all newly added [Neuron]
- *  with [ControlledNeuron] in order to sometimes (with [auditProbability]) audit [Neuron] behaviour.
- * We do it only sometimes because such audit increase [Neuron] touch time which for big amount of neurons may slow down
- * [tick] for [NeuralNetwork].
- * So, choose [auditProbability] based on what [controller] you use.
+ *  with [ControlledNeuron] in order to sometimes (with [auditProbability]) audit [Neuron] behavior.
+ * We do it only sometimes because such an audit increases [Neuron] touch time
+ *  which for big amount of neurons may slow down the [tick] for [NeuralNetwork].
  * Based on that audit results for all the neurons [controller] can use that global information to estimate neurons'
- *  relative quality (lets name that type of feedback as external).
- * [ControlledNeuralNetwork] not only wraps all the neurons with [ControlledNeuron], but also changes the [getFeedback]
+ *  relative quality (let's name that type of feedback as external).
+ * [ControlledNeuralNetwork] not only wraps all the neurons with [ControlledNeuron] but also changes the [getFeedback]
  *  behaviour.
- * [ControlledNeuralNetwork] replaces [getFeedback] of the [baseNeuralNetwork] (lets call it internal feedback)
+ * [ControlledNeuralNetwork] replaces [getFeedback] of the [baseNeuralNetwork] (let's call it internal feedback)
  *  with the weighted sum of internal and external feedback.
- * The weight of the sum determined by [controllerFeedbackWeight].
- * Note that external [Feedback] have to be calculated for all neurons in the [NeuralNetwork] (even for not active),
+ * The weight of the sum is determined by [controllerFeedbackWeight].
+ * Note that external [Feedback] has to be calculated for all neurons in the [NeuralNetwork] (even for not active),
  *  so it is even more expensive than [ControlledNeuron] audit (which is called only for active neurons).
- * To not let it slow down each [tick] that external feedback for all neurons collected not on each tick,
+ * To not let it slow down each [tick] that external feedback for all neurons is collected not on each tick,
  *  but periodically (with [updateControllerFeedbackPeriod] period).
+ * @param baseNeuralNetwork [NeuralNetworkWithInput] to control
+ * @param controller [NeuralNetworkController] to calculate external feedback
+ * @param auditProbability how often to control active neurons of the [baseNeuralNetwork]
+ * @param updateControllerFeedbackPeriod how often to update external feedback for all neurons (even not active)
+ * @param controllerFeedbackWeight weight of the external feedback. Should be in [[0, 1]]
+ *  (internal feedback weight will be 1-[controllerFeedbackWeight])
  */
 class ControlledNeuralNetwork(
 	private val baseNeuralNetwork: NeuralNetworkWithInput,
@@ -37,7 +42,7 @@ class ControlledNeuralNetwork(
 	private val controllerFeedbacks = mutableMapOf<Int, Feedback>()
 
 	override fun add(neuron: Neuron): Int {
-		return ControlledNeuron(neuron, timeStep).let {
+		return ControlledNeuron(neuron).let {
 			baseNeuralNetwork.add(it).also { id ->
 				controlledNeuronsWithID[id] = it
 				controllerFeedbacks[id] = Feedback.NEUTRAL
@@ -75,7 +80,7 @@ class ControlledNeuralNetwork(
 		baseNeuralNetwork.tick()
 		if (timeStep % updateControllerFeedbackPeriod == 0L) {
 			val (neuronIDsList, controlledNeuronsList) = controlledNeuronsWithID.toList().unzip()
-			val feedbacks = controller.getControllerFeedbacks(controlledNeuronsList, timeStep)
+			val feedbacks = controller.getControllerFeedbacks(controlledNeuronsList)
 			neuronIDsList.forEachIndexed { i, id ->
 				controllerFeedbacks[id] = feedbacks[i]
 			}

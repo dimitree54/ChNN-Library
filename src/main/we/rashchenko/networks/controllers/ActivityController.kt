@@ -13,7 +13,7 @@ import kotlin.math.sqrt
  * Assigns penalty for neurons that far from the average and encourage ones that close to the average.
  */
 class ActivityController : NeuralNetworkController {
-	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>, timeStep: Long): List<Feedback> {
+	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>): List<Feedback> {
 		neurons.map { it.getAverageActivity() }.toDoubleArray().let { activities ->
 			val mean = StatUtils.mean(activities)
 			val std = sqrt(StatUtils.variance(activities))

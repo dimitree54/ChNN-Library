@@ -8,8 +8,8 @@ import we.rashchenko.neurons.ControlledNeuron
  *  and average their [getControllerFeedbacks] output.
  */
 class ComplexController(private vararg val controllers: NeuralNetworkController) : NeuralNetworkController {
-	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>, timeStep: Long): List<Feedback> {
-		val feedbacksPerController = controllers.map { it.getControllerFeedbacks(neurons, timeStep) }
+	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>): List<Feedback> {
+		val feedbacksPerController = controllers.map { it.getControllerFeedbacks(neurons) }
 		return neurons.indices.map { i ->
 			Feedback(feedbacksPerController.sumOf { it[i].value } / controllers.size)
 		}

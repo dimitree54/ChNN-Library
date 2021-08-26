@@ -14,7 +14,7 @@ import kotlin.math.sqrt
  *  old neurons compared to newly created.
  */
 class TimeController : NeuralNetworkController {
-	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>, timeStep: Long): List<Feedback> {
+	override fun getControllerFeedbacks(neurons: List<ControlledNeuron>): List<Feedback> {
 		neurons.map { it.getAverageTime() }.toDoubleArray().let { times ->
 			val mean = StatUtils.mean(times)
 			val std = sqrt(StatUtils.variance(times))
