@@ -58,7 +58,7 @@ interface NeuralNetwork : Ticking {
 	 * Do not let the system become discriminative based on [Neuron]'s type.
 	 * We need that method to control or observe neurons from outside the [NeuralNetwork].
 	 * For example, it is used by [Evolution] or for nn visualiser app (outside that project).
-	 * @return [Neuron] hidden under [neuronID] or null if there is no such is at [NeuralNetwork]
+	 * @return [Neuron] hidden under [neuronID] or null if there is no such ID at [NeuralNetwork]
 	 */
 	fun getNeuron(neuronID: Int): Neuron?
 }

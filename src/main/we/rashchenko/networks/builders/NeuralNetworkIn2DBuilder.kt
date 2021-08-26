@@ -13,9 +13,11 @@ import we.rashchenko.utils.randomIds
 
 
 /**
- * Builder that places [NeuralNetworkWithInput] into 2D space.
- * On each [addNeuron] coordinate for this [Neuron] sampled randomly from [0,1] and neuron
+ * [NeuralNetworkBuilder] that places [NeuralNetworkWithInput] into 2D space.
+ * On each [addNeuron] call coordinate for this [Neuron] sampled randomly from [[0,1]] and neuron
  *  connections sampled based on the distance between that coordinates.
+ * @param neuralNetwork [NeuralNetworkWithInput] to build
+ * @param neuronsSampler generator of new [Neuron]s for [neuralNetwork]
  */
 class NeuralNetworkIn2DBuilder(
 	override val neuralNetwork: NeuralNetworkWithInput,

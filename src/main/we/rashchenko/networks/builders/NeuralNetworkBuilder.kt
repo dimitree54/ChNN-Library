@@ -4,10 +4,10 @@ import we.rashchenko.networks.NeuralNetwork
 import we.rashchenko.neurons.Neuron
 
 /**
- * [NeuralNetwork] manages internal neurons' behaviour,
+ * [NeuralNetwork] manages internal neurons' behavior,
  *  but it is not supposed to manage new neurons sampling for itself,
  *  nor managing how neurons should be wired with each other.
- * For that purposes there is [NeuralNetworkBuilder].
+ * For that purpose there is [NeuralNetworkBuilder].
  */
 interface NeuralNetworkBuilder {
 	/**

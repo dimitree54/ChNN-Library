@@ -7,6 +7,9 @@ import we.rashchenko.neurons.inputs.InputNeuron
  * [NeuralNetwork] where some [Neuron]-nodes specially marked as [InputNeuron]. To understand what privileges [InputNeuron] has check its documentation.
  */
 interface NeuralNetworkWithInput : NeuralNetwork {
+	/**
+	 * IDs for only input neurons.
+	 */
 	val inputNeuronIDs: Collection<Int>
 
 	/**
