@@ -8,7 +8,7 @@ import java.util.*
 /**
  * Wrapper for the collection of [NeuronsSampler]s that samples neurons from all wrapped samplers with
  *  different probabilities.
- * Better [Neuron]s sampler produces, more often it will be used on the [next] sampling.
+ * Better [Neuron]s the sampler produces, more often it will be used on the [next] sampling.
  */
 class NeuronsManager : NeuronsSampler {
 	override val name: String = "manager"

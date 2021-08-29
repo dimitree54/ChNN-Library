@@ -10,7 +10,7 @@ import we.rashchenko.base.Feedback
  *  neurons of that type to sample more successful neurons in the future.
  * Warning, it is prohibited to save references to previously sampled neurons inside the [NeuronsSampler].
  * To save meta-info with which [Neuron] was sampled use some separate classes.
- * We need this restriction to not let the [NeuronsSampler] to modify previously sampled neurons.
+ * We need that restriction to not let the [NeuronsSampler] to modify previously sampled neurons.
  * [Neuron] should use only local information.
  * For more info about such restrictions check [ChNN competition rules][TODO], [Loopholes discussion][TODO].
  * There you can suggest solutions how to integrate such restriction into the code architecture instead of text rules.
@@ -39,9 +39,9 @@ interface NeuronsSampler {
 
 	/**
 	 * Report that the [Neuron] with [id] was so bad that could not stand natural selection and died.
-	 * You can remove some saved info about that [Neuron] now
+	 * You can remove saved info about that [Neuron] now
 	 *  (it is guaranteed that there will be no [reportFeedback] for that [id] anymore).
-	 * But also you can save info about that [Neuron] to not sample such bad neurons in the future.
+	 * Or you can save info about that [Neuron] to not sample such bad neurons in the future.
 	 */
 	fun reportDeath(id: Int)
 }
