@@ -5,11 +5,14 @@ import we.rashchenko.base.Feedback
 import we.rashchenko.neurons.Neuron
 
 
-// Other external neurons possible:
-//  - in that one external activity is dominating. That is good for receiving always available external activity,
-//     by bad for training on sometimes missing activity.
-//  - other option is to make internal activity dominating and make external activity only affecting feedback,
-//     that is good for training, but how initial activity will appear at network?
+/**
+ * Implementation of the [InputNeuron] that copies value of the external [Activity]
+ *  ignoring all the internal [baseNeuron] activity.
+ * That internal [baseNeuron] activity is used to calculate [getInternalFeedback].
+ * Internal feedback is based on the mismatch of these internal and external activities.
+ * That [InputNeuron] is good for receiving always available external activity,
+ *  but bad for training on sometimes missing activity.
+ */
 class MirroringNeuron(
 	private val externalActivity: Activity, private val baseNeuron: Neuron
 ) : InputNeuron {
