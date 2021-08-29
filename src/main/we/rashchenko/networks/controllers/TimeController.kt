@@ -10,7 +10,7 @@ import kotlin.math.sqrt
 /**
  * [NeuralNetworkController] that controls [ControlledNeuron.averageFeedbackTime] penalizing neurons that slower than
  *  average and encouraging ones that faster.
- * Note that there is a [problem][https://github.com/dimitree54/ChNN-Library/issues/13] that adds bias against
+ * Note that there is a [problem](https://github.com/dimitree54/ChNN-Library/issues/13) that adds bias against
  *  old neurons compared to newly created.
  */
 class TimeController : NeuralNetworkController {
