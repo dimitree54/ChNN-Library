@@ -5,6 +5,11 @@ import we.rashchenko.utils.ExponentialMovingAverage
 import we.rashchenko.utils.softmax
 import java.util.*
 
+/**
+ * Wrapper for the collection of [NeuronsSampler]s that samples neurons from all wrapped samplers with
+ *  different probabilities.
+ * Better [Neuron]s sampler produces, more often it will be used on the [next] sampling.
+ */
 class NeuronsManager : NeuronsSampler {
 	override val name: String = "manager"
 	private val neuronSamplerMap = mutableMapOf<Int, NeuronsSampler>()
@@ -23,7 +28,7 @@ class NeuronsManager : NeuronsSampler {
 
 	private fun updateRanges() {
 		val keys = samplersScore.keys
-		val probabilities = softmax(samplersScore.values.map { it.value })
+		val probabilities = softmax(samplersScore.values.map { it.value })  // @todo tune softmax coefficient
 
 		probabilityRanges.clear()
 		var lastMax = 0.0
