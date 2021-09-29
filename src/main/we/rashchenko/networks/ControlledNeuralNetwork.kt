@@ -9,17 +9,19 @@ import we.rashchenko.neurons.inputs.InputNeuron
 import java.util.*
 
 /**
- * That [NeuralNetwork] is a wrapper for any other [baseNeuralNetwork] that wraps all newly added [Neuron]
+ * That [NeuralNetwork] is a wrapper for any other [baseNeuralNetwork] that wraps all newly added [Neuron]s
  *  with [ControlledNeuron] in order to sometimes (with [auditProbability]) audit [Neuron] behavior.
  * We do it only sometimes because such an audit increases [Neuron] touch time
- *  which for big amount of neurons may slow down the [tick] for [NeuralNetwork].
- * Based on that audit results for all the neurons [controller] can use that global information to estimate neurons'
+ *  which for a big amount of neurons may slow down the [tick] of the [NeuralNetwork].
+ * Based on that audit results for all the neurons [controller] can estimate neurons'
  *  relative quality (let's name that type of feedback as external).
- * [ControlledNeuralNetwork] not only wraps all the neurons with [ControlledNeuron] but also changes the [getFeedback]
- *  behaviour.
+ *
+ * [ControlledNeuralNetwork] not only wraps all the neurons with [ControlledNeuron], but also changes the [getFeedback]
+ *  behavior.
  * [ControlledNeuralNetwork] replaces [getFeedback] of the [baseNeuralNetwork] (let's call it internal feedback)
  *  with the weighted sum of internal and external feedback.
  * The weight of the sum is determined by [controllerFeedbackWeight].
+ *
  * Note that external [Feedback] has to be calculated for all neurons in the [NeuralNetwork] (even for not active),
  *  so it is even more expensive than [ControlledNeuron] audit (which is called only for active neurons).
  * To not let it slow down each [tick] that external feedback for all neurons is collected not on each tick,

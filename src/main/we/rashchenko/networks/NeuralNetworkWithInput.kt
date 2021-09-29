@@ -4,7 +4,7 @@ import we.rashchenko.neurons.Neuron
 import we.rashchenko.neurons.inputs.InputNeuron
 
 /**
- * [NeuralNetwork] where some [Neuron]-nodes specially marked as [InputNeuron].
+ * [NeuralNetwork] with some [Neuron]-nodes specially marked as [InputNeuron].
  * [NeuralNetworkWithInput] should check [InputNeuron]s state on each [tick] to not miss any [InputNeuron]
  *  state change initiated from outside the [NeuralNetwork].
  *

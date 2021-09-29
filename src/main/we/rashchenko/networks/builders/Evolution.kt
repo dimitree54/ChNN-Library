@@ -8,19 +8,20 @@ import we.rashchenko.utils.collections.WorstNNeuronIDs
 import java.util.*
 
 /**
- * That is [NeuralNetworkBuilder] that not only adds neurons and connections but also removes bad neurons.
+ * That is [NeuralNetworkBuilder] that not only adds neurons and connections, but also removes bad neurons.
  * [Evolution] wraps base builder adding [tick] function that implements natural selection.
  * [Evolution] is ticking independently of target [NeuralNetwork] and sometimes
  *  (with [selectionProbability]) collects [Feedback] for all the neurons in the [NeuralNetwork].
  * [Feedback] for non-active neurons is also collected which makes that operation quite expensive,
  *  that is why we do it just sometimes.
+ *
  * After collecting [Feedback] for all neurons the worst [neuronsForSelection] of them are considered as candidates for removal.
  * Those neurons are notified by the [Neuron.update] function (calling update considered as a warning).
  * If some [Neuron] warned [warningsBeforeKill] times (in total, not only consequently) it is replaced with other random
  *  [Neuron] by calling [NeuralNetworkBuilder.remove] and [NeuralNetworkBuilder.addNeuron] functions of
  *  the wrapped builder.
  * So, as you can see that class implements only bad neurons killing,
- *  but a sampling of new successful neurons is already managed by the base builder.
+ *  but a sampling of new successful neurons should be managed by the base builder.
  *  @param builder the base builder that manges adding and removal of neurons.
  *  @param neuronsForSelection number of candidates for removal on each selection
  *  @param warningsBeforeKill number of warnings for bad neurons before replacing it

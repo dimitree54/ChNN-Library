@@ -7,12 +7,13 @@ import we.rashchenko.neurons.Neuron
 
 /**
  * [NeuralNetwork] is a directed graph with [Neuron] as nodes.
- * However, for privacy reasons all that neurons are hidden under their IDs.
- * Based on that graph connections neurons "touch" each other
+ * However, for [privacy reasons](https://github.com/dimitree54/ChNN-Library/discussions/18#discussion-3583508),
+ *  all that neurons are hidden under their IDs.
+ * Based on these graph connections neurons "touch" each other
  *  (check [Neuron] documentation to understand what "touch" is)
  *  (source [Neuron] of the connection "touches" target [Neuron] of the connection).
- * After the touch there is a feedback collection stage where neurons estimate each other quality based
- *  on reversed connections (target node of the connection sends feedback to the source node).
+ * After the touch, there is a feedback collection stage where neurons estimate each other quality based
+ *  on reversed connections (the target node of the connection sends feedback to the source node).
  */
 interface NeuralNetwork : Ticking {
 	/**
@@ -57,7 +58,7 @@ interface NeuralNetwork : Ticking {
 	 * Get the [Neuron] with [neuronID]. Note that this method reveals [Neuron] privacy so be careful using it.
 	 * Do not let the system become discriminative based on [Neuron]'s type.
 	 * We need that method to control or observe neurons from outside the [NeuralNetwork].
-	 * For example, it is used by [Evolution] or for nn visualiser app (outside that project).
+	 * For example, it is used by [Evolution] or for nn visualizer app (outside that project).
 	 * @return [Neuron] hidden under [neuronID] or null if there is no such ID at [NeuralNetwork]
 	 */
 	fun getNeuron(neuronID: Int): Neuron?

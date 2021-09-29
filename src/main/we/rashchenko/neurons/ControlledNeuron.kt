@@ -90,7 +90,7 @@ class ControlledNeuron(private val baseNeuron: Neuron) : Neuron by baseNeuron {
 	 * Also, that may introduce bias against older neurons compared with new one that never estimated rare functions
 	 *  time yet.
 	 * To avoid the first bias try to make more steps [control]led.
-	 * For the second one you can use [issue #13][https://github.com/dimitree54/ChNN-Library/issues/13] to discuss how
+	 * For the second one you can use [issue #13](https://github.com/dimitree54/ChNN-Library/issues/13) to discuss how
 	 *  to solve that bias.
 	 */
 	fun getAverageTime(): Double = averageGetActiveTime.value + averageUpdateTime.value +
