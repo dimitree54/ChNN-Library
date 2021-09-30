@@ -1,8 +1,6 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:we.rashchenko.base////PointingToDeclaration/chnn-library/we.rashchenko.base/index.html
-$dokka.location:we.rashchenko.base//getFeedback/we.rashchenko.utils.ExponentialMovingAverage#/PointingToDeclaration/chnn-library/we.rashchenko.base/get-feedback.html
-$dokka.location:we.rashchenko.base//update/we.rashchenko.utils.ExponentialMovingAverage#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.base/update.html
 $dokka.location:we.rashchenko.base/Activity///PointingToDeclaration/chnn-library/we.rashchenko.base/-activity/index.html
 $dokka.location:we.rashchenko.base/Activity/active/#/PointingToDeclaration/chnn-library/we.rashchenko.base/-activity/active.html
 $dokka.location:we.rashchenko.base/ExternallyControlledActivity///PointingToDeclaration/chnn-library/we.rashchenko.base/-externally-controlled-activity/index.html
@@ -29,44 +27,48 @@ $dokka.location:we.rashchenko.environments/SimpleEnvironment/activities/#/Pointi
 $dokka.location:we.rashchenko.environments/SimpleEnvironment/tick/#/PointingToDeclaration/chnn-library/we.rashchenko.environments/-simple-environment/tick.html
 $dokka.location:we.rashchenko.environments/SimpleEnvironment/timeStep/#/PointingToDeclaration/chnn-library/we.rashchenko.environments/-simple-environment/time-step.html
 $dokka.location:we.rashchenko.networks.builders////PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/index.html
+$dokka.location:we.rashchenko.networks.builders/Evolution///PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-evolution/index.html
+$dokka.location:we.rashchenko.networks.builders/Evolution/Evolution/#we.rashchenko.networks.builders.NeuralNetworkBuilder#kotlin.Int#kotlin.Int#kotlin.Double/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-evolution/-evolution.html
+$dokka.location:we.rashchenko.networks.builders/Evolution/tick/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-evolution/tick.html
+$dokka.location:we.rashchenko.networks.builders/Evolution/timeStep/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-evolution/time-step.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkBuilder///PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-builder/index.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkBuilder/addNeuron/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-builder/add-neuron.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkBuilder/neuralNetwork/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-builder/neural-network.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkBuilder/remove/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-builder/remove.html
-$dokka.location:we.rashchenko.networks.builders/NeuralNetworkBuilder/reportFeedback/#kotlin.Int#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-builder/report-feedback.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder///PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/index.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/NeuralNetworkIn2DBuilder/#we.rashchenko.networks.NeuralNetworkWithInput#we.rashchenko.neurons.NeuronsSampler/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/-neural-network-in2-d-builder.html
+$dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/addEnvironment/#we.rashchenko.base.ObservableActivities/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/add-environment.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/addNeuron/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/add-neuron.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/getPosition/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/get-position.html
-$dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/initialise/#kotlin.Int#we.rashchenko.environments.Environment/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/initialise.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/neuralNetwork/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/neural-network.html
 $dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/remove/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/remove.html
-$dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/reportFeedback/#kotlin.Int#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/report-feedback.html
+$dokka.location:we.rashchenko.networks.builders/NeuralNetworkIn2DBuilder/removeEnvironment/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-in2-d-builder/remove-environment.html
+$dokka.location:we.rashchenko.networks.builders/NeuralNetworkWithInputBuilder///PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-with-input-builder/index.html
+$dokka.location:we.rashchenko.networks.builders/NeuralNetworkWithInputBuilder/addEnvironment/#we.rashchenko.base.ObservableActivities/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-with-input-builder/add-environment.html
+$dokka.location:we.rashchenko.networks.builders/NeuralNetworkWithInputBuilder/neuralNetwork/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-with-input-builder/neural-network.html
+$dokka.location:we.rashchenko.networks.builders/NeuralNetworkWithInputBuilder/removeEnvironment/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks.builders/-neural-network-with-input-builder/remove-environment.html
 $dokka.location:we.rashchenko.networks.controllers////PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/index.html
 $dokka.location:we.rashchenko.networks.controllers/ActivityController///PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-activity-controller/index.html
 $dokka.location:we.rashchenko.networks.controllers/ActivityController/ActivityController/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-activity-controller/-activity-controller.html
-$dokka.location:we.rashchenko.networks.controllers/ActivityController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-activity-controller/get-controller-feedbacks.html
+$dokka.location:we.rashchenko.networks.controllers/ActivityController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-activity-controller/get-controller-feedbacks.html
 $dokka.location:we.rashchenko.networks.controllers/ComplexController///PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-complex-controller/index.html
 $dokka.location:we.rashchenko.networks.controllers/ComplexController/ComplexController/#kotlin.Array[we.rashchenko.networks.controllers.NeuralNetworkController]/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-complex-controller/-complex-controller.html
-$dokka.location:we.rashchenko.networks.controllers/ComplexController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-complex-controller/get-controller-feedbacks.html
+$dokka.location:we.rashchenko.networks.controllers/ComplexController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-complex-controller/get-controller-feedbacks.html
 $dokka.location:we.rashchenko.networks.controllers/NeuralNetworkController///PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-neural-network-controller/index.html
-$dokka.location:we.rashchenko.networks.controllers/NeuralNetworkController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-neural-network-controller/get-controller-feedbacks.html
+$dokka.location:we.rashchenko.networks.controllers/NeuralNetworkController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-neural-network-controller/get-controller-feedbacks.html
 $dokka.location:we.rashchenko.networks.controllers/TimeController///PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-time-controller/index.html
 $dokka.location:we.rashchenko.networks.controllers/TimeController/TimeController/#/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-time-controller/-time-controller.html
-$dokka.location:we.rashchenko.networks.controllers/TimeController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-time-controller/get-controller-feedbacks.html
+$dokka.location:we.rashchenko.networks.controllers/TimeController/getControllerFeedbacks/#kotlin.collections.List[we.rashchenko.neurons.ControlledNeuron]/PointingToDeclaration/chnn-library/we.rashchenko.networks.controllers/-time-controller/get-controller-feedbacks.html
 $dokka.location:we.rashchenko.networks////PointingToDeclaration/chnn-library/we.rashchenko.networks/index.html
 $dokka.location:we.rashchenko.networks/ControlledNeuralNetwork///PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/index.html
 $dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/ControlledNeuralNetwork/#we.rashchenko.networks.NeuralNetworkWithInput#we.rashchenko.networks.controllers.NeuralNetworkController#kotlin.Double#kotlin.Long#kotlin.Double/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/-controlled-neural-network.html
 $dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/add/#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/add.html
-$dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/addInputNeuron/#we.rashchenko.neurons.InputNeuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/add-input-neuron.html
-$dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/getCollaborativeFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/get-collaborative-feedback.html
-$dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/getControllerFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/get-controller-feedback.html
+$dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/addInputNeuron/#we.rashchenko.neurons.inputs.InputNeuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/add-input-neuron.html
+$dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/getExternalFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/get-external-feedback.html
 $dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/get-feedback.html
+$dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/getInternalFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/get-internal-feedback.html
 $dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/remove/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/remove.html
 $dokka.location:we.rashchenko.networks/ControlledNeuralNetwork/tick/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-controlled-neural-network/tick.html
-$dokka.location:we.rashchenko.networks/Evolution///PointingToDeclaration/chnn-library/we.rashchenko.networks/-evolution/index.html
-$dokka.location:we.rashchenko.networks/Evolution/Evolution/#we.rashchenko.networks.builders.NeuralNetworkBuilder#kotlin.Int#kotlin.Int#kotlin.Double/PointingToDeclaration/chnn-library/we.rashchenko.networks/-evolution/-evolution.html
-$dokka.location:we.rashchenko.networks/Evolution/step/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-evolution/step.html
 $dokka.location:we.rashchenko.networks/NeuralNetwork///PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network/index.html
 $dokka.location:we.rashchenko.networks/NeuralNetwork/add/#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network/add.html
 $dokka.location:we.rashchenko.networks/NeuralNetwork/addConnection/#kotlin.Int#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network/add-connection.html
@@ -76,13 +78,13 @@ $dokka.location:we.rashchenko.networks/NeuralNetwork/getNeuron/#kotlin.Int/Point
 $dokka.location:we.rashchenko.networks/NeuralNetwork/neuronIDs/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network/neuron-i-ds.html
 $dokka.location:we.rashchenko.networks/NeuralNetwork/remove/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network/remove.html
 $dokka.location:we.rashchenko.networks/NeuralNetworkWithInput///PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network-with-input/index.html
-$dokka.location:we.rashchenko.networks/NeuralNetworkWithInput/addInputNeuron/#we.rashchenko.neurons.InputNeuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network-with-input/add-input-neuron.html
+$dokka.location:we.rashchenko.networks/NeuralNetworkWithInput/addInputNeuron/#we.rashchenko.neurons.inputs.InputNeuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network-with-input/add-input-neuron.html
 $dokka.location:we.rashchenko.networks/NeuralNetworkWithInput/inputNeuronIDs/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-neural-network-with-input/input-neuron-i-ds.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork///PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/index.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/StochasticNeuralNetwork/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/-stochastic-neural-network.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/add/#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/add.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/addConnection/#kotlin.Int#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/add-connection.html
-$dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/addInputNeuron/#we.rashchenko.neurons.InputNeuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/add-input-neuron.html
+$dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/addInputNeuron/#we.rashchenko.neurons.inputs.InputNeuron/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/add-input-neuron.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/connections/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/connections.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/get-feedback.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/getNeuron/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/get-neuron.html
@@ -91,6 +93,25 @@ $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/neuronIDs/#/Point
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/remove/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/remove.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/tick/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/tick.html
 $dokka.location:we.rashchenko.networks/StochasticNeuralNetwork/timeStep/#/PointingToDeclaration/chnn-library/we.rashchenko.networks/-stochastic-neural-network/time-step.html
+$dokka.location:we.rashchenko.neurons.inputs////PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/index.html
+$dokka.location:we.rashchenko.neurons.inputs/InputNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-input-neuron/index.html
+$dokka.location:we.rashchenko.neurons.inputs/InputNeuron/getInternalFeedback/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-input-neuron/get-internal-feedback.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/index.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron/MirroringNeuron/#we.rashchenko.base.Activity#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/-mirroring-neuron.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron/active/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/active.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron/forgetSource/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/forget-source.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/get-feedback.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron/getInternalFeedback/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/get-internal-feedback.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/touch.html
+$dokka.location:we.rashchenko.neurons.inputs/MirroringNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-mirroring-neuron/update.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/index.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/SupervisedNeuron/#we.rashchenko.base.Activity#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/-supervised-neuron.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/active/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/active.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/forgetSource/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/forget-source.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/get-feedback.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/getInternalFeedback/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/get-internal-feedback.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/touch.html
+$dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/update.html
 $dokka.location:we.rashchenko.neurons.zoo////PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/index.html
 $dokka.location:we.rashchenko.neurons.zoo/RandomNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/index.html
 $dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/RandomNeuron/#kotlin.Float/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/-random-neuron.html
@@ -108,25 +129,15 @@ $dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler/reportDeath/#kotli
 $dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler/reportFeedback/#kotlin.Int#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron-sampler/report-feedback.html
 $dokka.location:we.rashchenko.neurons////PointingToDeclaration/chnn-library/we.rashchenko.neurons/index.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/index.html
-$dokka.location:we.rashchenko.neurons/ControlledNeuron/ControlledNeuron/#we.rashchenko.neurons.Neuron#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/-controlled-neuron.html
+$dokka.location:we.rashchenko.neurons/ControlledNeuron/ControlledNeuron/#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/-controlled-neuron.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/active/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/active.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/control/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/control.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/forgetSource/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/forget-source.html
-$dokka.location:we.rashchenko.neurons/ControlledNeuron/getAverageActivity/#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/get-average-activity.html
+$dokka.location:we.rashchenko.neurons/ControlledNeuron/getAverageActivity/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/get-average-activity.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/getAverageTime/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/get-average-time.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/get-feedback.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/touch.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/update.html
-$dokka.location:we.rashchenko.neurons/InputNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-input-neuron/index.html
-$dokka.location:we.rashchenko.neurons/InputNeuron/getInternalFeedback/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-input-neuron/get-internal-feedback.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/index.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron/MirroringNeuron/#we.rashchenko.base.Activity#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/-mirroring-neuron.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron/active/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/active.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron/forgetSource/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/forget-source.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/get-feedback.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron/getInternalFeedback/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/get-internal-feedback.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/touch.html
-$dokka.location:we.rashchenko.neurons/MirroringNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-mirroring-neuron/update.html
 $dokka.location:we.rashchenko.neurons/Neuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neuron/index.html
 $dokka.location:we.rashchenko.neurons/Neuron/forgetSource/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neuron/forget-source.html
 $dokka.location:we.rashchenko.neurons/Neuron/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neuron/get-feedback.html
@@ -176,6 +187,7 @@ $dokka.location:we.rashchenko.utils.collections/WorstN/add/#TypeParam(bounds=[ko
 $dokka.location:we.rashchenko.utils.collections/WorstNNeuronIDs///PointingToDeclaration/chnn-library/we.rashchenko.utils.collections/-worst-n-neuron-i-ds/index.html
 $dokka.location:we.rashchenko.utils.collections/WorstNNeuronIDs/WorstNNeuronIDs/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.utils.collections/-worst-n-neuron-i-ds/-worst-n-neuron-i-ds.html
 $dokka.location:we.rashchenko.utils////PointingToDeclaration/chnn-library/we.rashchenko.utils/index.html
+$dokka.location:we.rashchenko.utils//ZERO_DIV_EPS/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-z-e-r-o_-d-i-v_-e-p-s.html
 $dokka.location:we.rashchenko.utils//clip/kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/chnn-library/we.rashchenko.utils/clip.html
 $dokka.location:we.rashchenko.utils//randomIds/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/random-ids.html
 $dokka.location:we.rashchenko.utils//softmax/#kotlin.collections.List[kotlin.Double]/PointingToDeclaration/chnn-library/we.rashchenko.utils/softmax.html
@@ -186,7 +198,6 @@ $dokka.location:we.rashchenko.utils/ExponentialMovingAverage/update/#kotlin.Doub
 $dokka.location:we.rashchenko.utils/ExponentialMovingAverage/value/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-exponential-moving-average/value.html
 $dokka.location:we.rashchenko.utils/KNearestVectorsConnectionSampler///PointingToDeclaration/chnn-library/we.rashchenko.utils/-k-nearest-vectors-connection-sampler/index.html
 $dokka.location:we.rashchenko.utils/KNearestVectorsConnectionSampler/KNearestVectorsConnectionSampler/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.utils/-k-nearest-vectors-connection-sampler/-k-nearest-vectors-connection-sampler.html
-$dokka.location:we.rashchenko.utils/KNearestVectorsConnectionSampler/connectAll/#kotlin.collections.Collection[we.rashchenko.utils.Vector2]/PointingToDeclaration/chnn-library/we.rashchenko.utils/-k-nearest-vectors-connection-sampler/connect-all.html
 $dokka.location:we.rashchenko.utils/KNearestVectorsConnectionSampler/connectNew/#we.rashchenko.utils.Vector2#kotlin.collections.Collection[we.rashchenko.utils.Vector2]/PointingToDeclaration/chnn-library/we.rashchenko.utils/-k-nearest-vectors-connection-sampler/connect-new.html
 $dokka.location:we.rashchenko.utils/RandomPositionSampler///PointingToDeclaration/chnn-library/we.rashchenko.utils/-random-position-sampler/index.html
 $dokka.location:we.rashchenko.utils/RandomPositionSampler/RandomPositionSampler/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-random-position-sampler/-random-position-sampler.html
@@ -210,6 +221,7 @@ we.rashchenko.networks
 we.rashchenko.networks.builders
 we.rashchenko.networks.controllers
 we.rashchenko.neurons
+we.rashchenko.neurons.inputs
 we.rashchenko.neurons.zoo
 we.rashchenko.utils
 we.rashchenko.utils.collections
