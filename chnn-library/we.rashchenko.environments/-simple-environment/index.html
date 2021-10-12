@@ -22,7 +22,7 @@
           </div>
           <div class="cover ">
             <h1 class="cover"><span>Simple</span><wbr></wbr><span>Environment</span></h1>
-            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">class <a href="index.html">SimpleEnvironment</a>(tickPeriod: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>) : <a href="../-environment/index.html">Environment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Exemplar simple environment that have just 2 public nodes. Nodes randomly change their behaviour once in <span data-unresolved-link="we.rashchenko.environments/SimpleEnvironment/tickPeriod/#/PointingToDeclaration/">tickPeriod</span> ticks. These two nodes always either both active or not active (they are synchronised).</p></div></div>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">class <a href="index.html">SimpleEnvironment</a>(tickPeriod: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>) : <a href="../-input-output-environment/index.html">InputOutputEnvironment</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Exemplar simple environment that have just 2 public nodes, one input and one output. Nodes randomly change their behaviour once in <span data-unresolved-link="we.rashchenko.environments/SimpleEnvironment/tickPeriod/#/PointingToDeclaration/">tickPeriod</span> ticks. These two nodes always either both active or not active (they are synchronised).</p></div></div>
           </div>
           <div class="tabbedcontent">
             <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
@@ -65,12 +65,38 @@
               <div class="table" data-togglable="Properties"><a data-name="-705599349%2FProperties%2F769193423" anchor-label="activities" id="-705599349%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
                 <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="activities.html">activities</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-705599349%2FProperties%2F769193423"></span>
+                    <div class=""><span class="inline-flex"><a href="index.html#-705599349%2FProperties%2F769193423">activities</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-705599349%2FProperties%2F769193423"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-705599349%2FProperties%2F769193423" anchor-label="activities" id="-705599349%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">open override val <a href="activities.html">activities</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../../we.rashchenko.base/-externally-controlled-activity/index.html">ExternallyControlledActivity</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-705599349%2FProperties%2F769193423" anchor-label="activities" id="-705599349%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Public (observable) Activity of the instance.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-705599349%2FProperties%2F769193423" anchor-label="activities" id="-705599349%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">open override val <a href="index.html#-705599349%2FProperties%2F769193423">activities</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../../we.rashchenko.base/-activity/index.html">Activity</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-705599349%2FProperties%2F769193423" anchor-label="activities" id="-705599349%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Public (observable) <a href="../../we.rashchenko.base/-activity/index.html">Activities</a> of the instance.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="569521419%2FProperties%2F769193423" anchor-label="inputActivities" id="569521419%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="input-activities.html">inputActivities</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="569521419%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="569521419%2FProperties%2F769193423" anchor-label="inputActivities" id="569521419%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">open override val <a href="input-activities.html">inputActivities</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../../we.rashchenko.base/-externally-controlled-activity/index.html">ExternallyControlledActivity</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-696242294%2FProperties%2F769193423" anchor-label="outputActivities" id="-696242294%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="output-activities.html">outputActivities</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-696242294%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-696242294%2FProperties%2F769193423" anchor-label="outputActivities" id="-696242294%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">open override val <a href="output-activities.html">outputActivities</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../../we.rashchenko.base/-externally-controlled-hidden-activity/index.html">ExternallyControlledHiddenActivity</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -84,6 +110,19 @@
                     <div>
                       <div class="title">
                         <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1059806591%2FProperties%2F769193423" anchor-label="timeStep" id="1059806591%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">open override var <a href="time-step.html">timeStep</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a> = 0<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1059806591%2FProperties%2F769193423" anchor-label="timeStep" id="1059806591%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Number of <a href="tick.html">tick</a>s that happened with the instance.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1283070948%2FProperties%2F769193423" anchor-label="validationMode" id="-1283070948%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="validation-mode.html">validationMode</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283070948%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-1283070948%2FProperties%2F769193423" anchor-label="validationMode" id="-1283070948%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">var <a href="validation-mode.html">validationMode</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> = false<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
                       </div>
                     </div>
                   </div>
