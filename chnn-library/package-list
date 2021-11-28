@@ -138,21 +138,6 @@ $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/getFeedback/#kotli
 $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/getInternalFeedback/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/get-internal-feedback.html
 $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/touch.html
 $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/update.html
-$dokka.location:we.rashchenko.neurons.zoo////PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/index.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/index.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/RandomNeuron/#kotlin.Float/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/-random-neuron.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/activationProbability/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/activation-probability.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/active/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/active.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/forgetSource/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/forget-source.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/get-feedback.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/touch.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron/update.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler///PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron-sampler/index.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler/RandomNeuronSampler/#kotlin.Float/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron-sampler/-random-neuron-sampler.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler/name/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron-sampler/name.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler/next/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron-sampler/next.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler/reportDeath/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron-sampler/report-death.html
-$dokka.location:we.rashchenko.neurons.zoo/RandomNeuronSampler/reportFeedback/#kotlin.Int#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.neurons.zoo/-random-neuron-sampler/report-feedback.html
 $dokka.location:we.rashchenko.neurons////PointingToDeclaration/chnn-library/we.rashchenko.neurons/index.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/index.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/ControlledNeuron/#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/-controlled-neuron.html
@@ -178,14 +163,6 @@ $dokka.location:we.rashchenko.neurons/Neuron/forgetSource/#kotlin.Int/PointingTo
 $dokka.location:we.rashchenko.neurons/Neuron/getFeedback/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neuron/get-feedback.html
 $dokka.location:we.rashchenko.neurons/Neuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neuron/touch.html
 $dokka.location:we.rashchenko.neurons/Neuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neuron/update.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/index.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/NeuronsManager/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/-neurons-manager.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/add/#we.rashchenko.neurons.NeuronsSampler/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/add.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/getSummary/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/get-summary.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/name/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/name.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/next/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/next.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/reportDeath/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/report-death.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/reportFeedback/#kotlin.Int#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/report-feedback.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/index.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/name/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/name.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/next/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/next.html
@@ -265,7 +242,6 @@ we.rashchenko.networks.builders
 we.rashchenko.networks.controllers
 we.rashchenko.neurons
 we.rashchenko.neurons.inputs
-we.rashchenko.neurons.zoo
 we.rashchenko.utils
 we.rashchenko.utils.collections
 
