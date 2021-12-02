@@ -166,12 +166,14 @@ $dokka.location:we.rashchenko.neurons/Neuron/update/#we.rashchenko.base.Feedback
 $dokka.location:we.rashchenko.neurons/NeuronsManager///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/index.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/NeuronsManager/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/-neurons-manager.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/add/#we.rashchenko.neurons.NeuronsSampler/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/add.html
+$dokka.location:we.rashchenko.neurons/NeuronsManager/author/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/author.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/getSummary/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/get-summary.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/name/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/name.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/next/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/next.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/reportDeath/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/report-death.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/reportFeedback/#kotlin.Int#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/report-feedback.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/index.html
+$dokka.location:we.rashchenko.neurons/NeuronsSampler/author/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/author.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/name/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/name.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/next/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/next.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/reportDeath/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/report-death.html
