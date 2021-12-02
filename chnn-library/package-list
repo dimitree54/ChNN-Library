@@ -139,6 +139,8 @@ $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/getInternalFeedbac
 $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/touch.html
 $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/update.html
 $dokka.location:we.rashchenko.neurons////PointingToDeclaration/chnn-library/we.rashchenko.neurons/index.html
+$dokka.location:we.rashchenko.neurons//getResultsMarkdownTable/#kotlin.collections.Map[we.rashchenko.neurons.NeuronsSampler,we.rashchenko.neurons.SamplerStats]/PointingToDeclaration/chnn-library/we.rashchenko.neurons/get-results-markdown-table.html
+$dokka.location:we.rashchenko.neurons//getSummary/#kotlin.collections.Map[we.rashchenko.neurons.NeuronsSampler,we.rashchenko.neurons.SamplerStats]/PointingToDeclaration/chnn-library/we.rashchenko.neurons/get-summary.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/index.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/ControlledNeuron/#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/-controlled-neuron.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/active/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/active.html
@@ -167,7 +169,7 @@ $dokka.location:we.rashchenko.neurons/NeuronsManager///PointingToDeclaration/ch
 $dokka.location:we.rashchenko.neurons/NeuronsManager/NeuronsManager/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/-neurons-manager.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/add/#we.rashchenko.neurons.NeuronsSampler/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/add.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/author/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/author.html
-$dokka.location:we.rashchenko.neurons/NeuronsManager/getSummary/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/get-summary.html
+$dokka.location:we.rashchenko.neurons/NeuronsManager/getSamplerStats/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/get-sampler-stats.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/name/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/name.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/next/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/next.html
 $dokka.location:we.rashchenko.neurons/NeuronsManager/reportDeath/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-manager/report-death.html
@@ -178,6 +180,11 @@ $dokka.location:we.rashchenko.neurons/NeuronsSampler/name/#/PointingToDeclaratio
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/next/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/next.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/reportDeath/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/report-death.html
 $dokka.location:we.rashchenko.neurons/NeuronsSampler/reportFeedback/#kotlin.Int#we.rashchenko.base.Feedback/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-neurons-sampler/report-feedback.html
+$dokka.location:we.rashchenko.neurons/SamplerStats///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-sampler-stats/index.html
+$dokka.location:we.rashchenko.neurons/SamplerStats/SamplerStats/#kotlin.Double#kotlin.Double#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-sampler-stats/-sampler-stats.html
+$dokka.location:we.rashchenko.neurons/SamplerStats/chooseProbability/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-sampler-stats/choose-probability.html
+$dokka.location:we.rashchenko.neurons/SamplerStats/population/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-sampler-stats/population.html
+$dokka.location:we.rashchenko.neurons/SamplerStats/score/#/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-sampler-stats/score.html
 $dokka.location:we.rashchenko.utils.collections////PointingToDeclaration/chnn-library/we.rashchenko.utils.collections/index.html
 $dokka.location:we.rashchenko.utils.collections/AlwaysSorted///PointingToDeclaration/chnn-library/we.rashchenko.utils.collections/-always-sorted/index.html
 $dokka.location:we.rashchenko.utils.collections/AlwaysSorted/AlwaysSorted/#java.util.Comparator[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/chnn-library/we.rashchenko.utils.collections/-always-sorted/-always-sorted.html
