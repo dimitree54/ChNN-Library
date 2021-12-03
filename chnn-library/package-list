@@ -139,7 +139,6 @@ $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/getInternalFeedbac
 $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/touch.html
 $dokka.location:we.rashchenko.neurons.inputs/SupervisedNeuron/update/#we.rashchenko.base.Feedback#kotlin.Long/PointingToDeclaration/chnn-library/we.rashchenko.neurons.inputs/-supervised-neuron/update.html
 $dokka.location:we.rashchenko.neurons////PointingToDeclaration/chnn-library/we.rashchenko.neurons/index.html
-$dokka.location:we.rashchenko.neurons//getResultsMarkdownTable/#kotlin.collections.Map[we.rashchenko.neurons.NeuronsSampler,we.rashchenko.neurons.SamplerStats]/PointingToDeclaration/chnn-library/we.rashchenko.neurons/get-results-markdown-table.html
 $dokka.location:we.rashchenko.neurons//getSummary/#kotlin.collections.Map[we.rashchenko.neurons.NeuronsSampler,we.rashchenko.neurons.SamplerStats]/PointingToDeclaration/chnn-library/we.rashchenko.neurons/get-summary.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron///PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/index.html
 $dokka.location:we.rashchenko.neurons/ControlledNeuron/ControlledNeuron/#we.rashchenko.neurons.Neuron/PointingToDeclaration/chnn-library/we.rashchenko.neurons/-controlled-neuron/-controlled-neuron.html
@@ -218,7 +217,6 @@ $dokka.location:we.rashchenko.utils.collections/WorstNNeuronIDs/WorstNNeuronIDs/
 $dokka.location:we.rashchenko.utils////PointingToDeclaration/chnn-library/we.rashchenko.utils/index.html
 $dokka.location:we.rashchenko.utils//ZERO_DIV_EPS/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-z-e-r-o_-d-i-v_-e-p-s.html
 $dokka.location:we.rashchenko.utils//clip/kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/chnn-library/we.rashchenko.utils/clip.html
-$dokka.location:we.rashchenko.utils//randomIds/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/random-ids.html
 $dokka.location:we.rashchenko.utils//softmax/#kotlin.collections.List[kotlin.Double]/PointingToDeclaration/chnn-library/we.rashchenko.utils/softmax.html
 $dokka.location:we.rashchenko.utils/ExponentialMovingAverage///PointingToDeclaration/chnn-library/we.rashchenko.utils/-exponential-moving-average/index.html
 $dokka.location:we.rashchenko.utils/ExponentialMovingAverage/ExponentialMovingAverage/#kotlin.Double#kotlin.Double/PointingToDeclaration/chnn-library/we.rashchenko.utils/-exponential-moving-average/-exponential-moving-average.html
@@ -230,6 +228,9 @@ $dokka.location:we.rashchenko.utils/ExponentialMovingAverageHotStart/Exponential
 $dokka.location:we.rashchenko.utils/ExponentialMovingAverageHotStart/toString/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-exponential-moving-average-hot-start/to-string.html
 $dokka.location:we.rashchenko.utils/ExponentialMovingAverageHotStart/update/#kotlin.Double/PointingToDeclaration/chnn-library/we.rashchenko.utils/-exponential-moving-average-hot-start/update.html
 $dokka.location:we.rashchenko.utils/ExponentialMovingAverageHotStart/value/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-exponential-moving-average-hot-start/value.html
+$dokka.location:we.rashchenko.utils/IDsGenerator///PointingToDeclaration/chnn-library/we.rashchenko.utils/-i-ds-generator/index.html
+$dokka.location:we.rashchenko.utils/IDsGenerator/IDsGenerator/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-i-ds-generator/-i-ds-generator.html
+$dokka.location:we.rashchenko.utils/IDsGenerator/next/#/PointingToDeclaration/chnn-library/we.rashchenko.utils/-i-ds-generator/next.html
 $dokka.location:we.rashchenko.utils/KNearestVectorsConnectionSampler///PointingToDeclaration/chnn-library/we.rashchenko.utils/-k-nearest-vectors-connection-sampler/index.html
 $dokka.location:we.rashchenko.utils/KNearestVectorsConnectionSampler/KNearestVectorsConnectionSampler/#kotlin.Int/PointingToDeclaration/chnn-library/we.rashchenko.utils/-k-nearest-vectors-connection-sampler/-k-nearest-vectors-connection-sampler.html
 $dokka.location:we.rashchenko.utils/KNearestVectorsConnectionSampler/connectNew/#we.rashchenko.utils.Vector2#kotlin.collections.Collection[we.rashchenko.utils.Vector2]/PointingToDeclaration/chnn-library/we.rashchenko.utils/-k-nearest-vectors-connection-sampler/connect-new.html
