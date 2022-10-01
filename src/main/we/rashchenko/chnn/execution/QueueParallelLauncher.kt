@@ -47,16 +47,4 @@ class QueueParallelLauncher<ActivationType, FeedbackType>(
             Thread(::runThread).start()
         }
     }
-
-    override fun gatherInputs(node: Node<ActivationType, FeedbackType>): Map<Int, ActivationType> {
-        return Graphs.predecessorListOf(network, node)
-            .associateBy({ network.nodeIds[it]!! }, { synchronized(it) { it.getActivation() } })
-    }
-
-    override fun gatherFeedbacks(node: Node<ActivationType, FeedbackType>): List<FeedbackType> {
-        return successorListOf(
-            network,
-            node
-        ).mapNotNull { synchronized(it) { it.getFeedbacks() }[network.nodeIds[node]!!] }
-    }
 }

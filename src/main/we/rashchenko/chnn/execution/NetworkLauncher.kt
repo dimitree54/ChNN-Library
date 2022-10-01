@@ -12,10 +12,6 @@ abstract class NetworkLauncher<ActivationType, FeedbackType>(
         environments.add(environment)
     }
     abstract fun launch()
-    protected fun touch(node: Node<ActivationType, FeedbackType>){
-        node.reportFeedbacks(gatherFeedbacks(node))
-        node.touch(gatherInputs(node))
-    }
 
     abstract fun gatherInputs(node: Node<ActivationType, FeedbackType>): Map<Int, ActivationType>
 
