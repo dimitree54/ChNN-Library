@@ -14,6 +14,7 @@ dependencies {
 dependencies{
 	implementation("org.jgrapht:jgrapht-core:1.5.1")
 	implementation("com.google.guava:guava:31.1-jre")
+	implementation("com.badlogicgames.gdx:gdx:1.11.0")
 }
 
 // we need to specify following sourceSets because we store main and test not in default

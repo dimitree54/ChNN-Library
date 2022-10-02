@@ -1,43 +1,62 @@
 package we.rashchenko.chnn.execution
 
-import org.jgrapht.Graphs
-import org.jgrapht.Graphs.successorListOf
 import we.rashchenko.chnn.network.Network
-import we.rashchenko.chnn.node.Node
 import we.rashchenko.utils.UniqueQueue
 import java.util.concurrent.atomic.AtomicBoolean
 
 class QueueParallelLauncher<ActivationType, FeedbackType>(
-    network: Network<ActivationType, FeedbackType>,
+    private val network: Network<ActivationType, FeedbackType>,
     private val numParallel: Int
-) : NetworkLauncher<ActivationType, FeedbackType>(network) {
-    private val queue = UniqueQueue<Node<ActivationType, FeedbackType>>()
-    private fun addNodesToQueue(nodes: Collection<Node<ActivationType, FeedbackType>>) {
+): NetworkLauncher {
+    private val queue = UniqueQueue<Int>()
+    private fun addNodesToQueue(ids: Collection<Int>) {
         synchronized(queue) {
-            queue.addAll(nodes)
+            ids.forEach { locks.putIfAbsent(it, Object()) }
+            queue.addAll(ids)
         }
     }
 
-    private fun getNodeFromQueue(): Node<ActivationType, FeedbackType>? {
+    private fun getNodeFromQueue(): Int? {
         synchronized(queue) {
             return queue.poll()
         }
     }
 
     init {
-        addNodesToQueue(network.vertexSet())
+        addNodesToQueue(network.getAllIds())
     }
 
-    val shutdownRequested = AtomicBoolean(false)
+    private val locks = mutableMapOf<Int, Any>()
+
+    private val shutdownRequested = AtomicBoolean(false)
+    override fun stop() {
+        shutdownRequested.set(true)
+    }
     private fun runThread() {
         while (!shutdownRequested.get()) {
-            val node = getNodeFromQueue()
-            if (node == null) {
+            val nodeId = getNodeFromQueue()
+            if (nodeId == null) {
                 Thread.sleep(1000)
                 continue
             }
-            synchronized(node) { touch(node) }
-            addNodesToQueue(successorListOf(network, node))
+            synchronized(locks[nodeId]!!) {
+                val feedbacks = gatherFeedbacks(nodeId)
+                val inputs = gatherInputs(nodeId)
+                network.touch(nodeId, feedbacks, inputs)
+            }
+            addNodesToQueue(network.getNodesListeningNode(nodeId))
+        }
+    }
+
+    private fun gatherInputs(nodeId: Int): Map<Int, ActivationType> {
+        synchronized(locks[nodeId]!!) {
+            return network.gatherInputs(nodeId)
+        }
+    }
+
+    private fun gatherFeedbacks(nodeId: Int): List<FeedbackType> {
+        synchronized(locks[nodeId]!!) {
+            return network.gatherFeedbacks(nodeId)
         }
     }
 
