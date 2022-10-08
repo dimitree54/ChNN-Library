@@ -1,5 +1,6 @@
 plugins {
 	kotlin("jvm") version "1.7.10"
+	id("maven-publish")
 }
 
 repositories {
@@ -30,4 +31,13 @@ sourceSets.test {
 tasks.test {
 	useJUnitPlatform()
 	maxParallelForks = 8
+}
+
+publishing {
+	publications {
+		create<MavenPublication>("default") {
+			from(components["java"])
+			// Include any other artifacts here, like javadocs
+		}
+	}
 }
