@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Evolution</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script>  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn"><a href="../../../index.html">
+          <div id="logo"></div>
+        </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+<script type="text/javascript" src="../../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="chnn-library::we.rashchenko.networks.builders/Evolution///PointingToDeclaration//769193423">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">chnn-library</a>/<a href="../index.html">we.rashchenko.networks.builders</a>/<a href="index.html">Evolution</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>Evolution</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">class <a href="index.html">Evolution</a>(builder: <a href="../-neural-network-builder/index.html">NeuralNetworkBuilder</a>, neuronsForSelection: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, warningsBeforeKill: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, selectionProbability: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a>) : <a href="../../we.rashchenko.base/-ticking/index.html">Ticking</a>, <a href="../-neural-network-builder/index.html">NeuralNetworkBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">That is <a href="../-neural-network-builder/index.html">NeuralNetworkBuilder</a> that not only adds neurons and connections, but also removes bad neurons. <a href="index.html">Evolution</a> wraps base builder adding <a href="tick.html">tick</a> function that implements natural selection. <a href="index.html">Evolution</a> is ticking independently of target <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a> and sometimes (with <span data-unresolved-link="we.rashchenko.networks.builders/Evolution/selectionProbability/#/PointingToDeclaration/">selectionProbability</span>) collects <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a> for all the neurons in the <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a>. <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a> for non-active neurons is also collected which makes that operation quite expensive, that is why we do it just sometimes.</p><p class="paragraph">After collecting <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a> for all neurons the worst <span data-unresolved-link="we.rashchenko.networks.builders/Evolution/neuronsForSelection/#/PointingToDeclaration/">neuronsForSelection</span> of them are considered as candidates for removal. Those neurons are notified by the <a href="../../we.rashchenko.neurons/-neuron/update.html">Neuron.update</a> function (calling update considered as a warning). If some <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> warned <span data-unresolved-link="we.rashchenko.networks.builders/Evolution/warningsBeforeKill/#/PointingToDeclaration/">warningsBeforeKill</span> times (in total, not only consequently) it is replaced with other random <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> by calling <a href="../-neural-network-builder/remove.html">NeuralNetworkBuilder.remove</a> and <a href="../-neural-network-builder/add-neurons.html">NeuralNetworkBuilder.addNeurons</a> functions of the wrapped builder. So, as you can see that class implements only bad neurons killing, but a sampling of new successful neurons should be managed by the base builder.</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Parameters</h2>
+              <div data-togglable="Parameters">
+                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">builder</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the base builder that manges adding and removal of neurons.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">neuronsForSelection</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">number of candidates for removal on each selection</p></div></div></div></div></div><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">warningsBeforeKill</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">number of warnings for bad neurons before replacing it</p></div></div></div></div></div><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">selectionProbability</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">probability of the selection on the <a href="tick.html">tick</a></p></div></div></div></div></div></div></div></div></div>
+              </div>
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="-690606320%2FConstructors%2F769193423" anchor-label="Evolution" id="-690606320%2FConstructors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-evolution.html">Evolution</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-690606320%2FConstructors%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">fun <a href="-evolution.html">Evolution</a>(builder: <a href="../-neural-network-builder/index.html">NeuralNetworkBuilder</a>, neuronsForSelection: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, warningsBeforeKill: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, selectionProbability: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief ">the base builder that manges adding and removal of neurons.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="102679263%2FFunctions%2F769193423" anchor-label="addNeurons" id="102679263%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-neural-network-builder/add-neurons.html">addNeurons</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="102679263%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">open override fun <a href="../-neural-network-builder/add-neurons.html">addNeurons</a>(n: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>&gt;<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="102679263%2FFunctions%2F769193423" anchor-label="addNeurons" id="102679263%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="102679263%2FFunctions%2F769193423" anchor-label="addNeurons" id="102679263%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Sample <span data-unresolved-link="we.rashchenko.networks.builders/Evolution/addNeurons/#kotlin.Int/PointingToCallableParameters(0)/">n</span> random <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a>s, add them to the <a href="index.html#-272662776%2FProperties%2F769193423">neuralNetwork</a> and add some connections between each other and other previously added neurons</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1964675386%2FFunctions%2F769193423" anchor-label="remove" id="1964675386%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-neural-network-builder/remove.html">remove</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1964675386%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">open override fun <a href="../-neural-network-builder/remove.html">remove</a>(neuronID: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="1964675386%2FFunctions%2F769193423" anchor-label="remove" id="1964675386%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1964675386%2FFunctions%2F769193423" anchor-label="remove" id="1964675386%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Remove the <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> under <span data-unresolved-link="we.rashchenko.networks.builders/Evolution/remove/#kotlin.Int/PointingToCallableParameters(0)/">neuronID</span> from <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="104223654%2FFunctions%2F769193423" anchor-label="tick" id="104223654%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="tick.html">tick</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="104223654%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">open override fun <a href="tick.html">tick</a>()<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="104223654%2FFunctions%2F769193423" anchor-label="tick" id="104223654%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="104223654%2FFunctions%2F769193423" anchor-label="tick" id="104223654%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>The function to notify the instance that it is time to change its state.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-272662776%2FProperties%2F769193423" anchor-label="neuralNetwork" id="-272662776%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="index.html#-272662776%2FProperties%2F769193423">neuralNetwork</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-272662776%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="-272662776%2FProperties%2F769193423" anchor-label="neuralNetwork" id="-272662776%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">open override val <a href="index.html#-272662776%2FProperties%2F769193423">neuralNetwork</a>: <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-272662776%2FProperties%2F769193423" anchor-label="neuralNetwork" id="-272662776%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a> that <a href="../-neural-network-builder/index.html">NeuralNetworkBuilder</a> builds.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="315910794%2FProperties%2F769193423" anchor-label="timeStep" id="315910794%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="time-step.html">timeStep</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="315910794%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="315910794%2FProperties%2F769193423" anchor-label="timeStep" id="315910794%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">open override var <a href="time-step.html">timeStep</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a> = 0<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="315910794%2FProperties%2F769193423" anchor-label="timeStep" id="315910794%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Number of <a href="tick.html">tick</a>s that happened with the instance.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

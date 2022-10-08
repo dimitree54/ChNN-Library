@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Neuron</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script>  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn"><a href="../../../index.html">
+          <div id="logo"></div>
+        </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+<script type="text/javascript" src="../../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="chnn-library::we.rashchenko.neurons/Neuron///PointingToDeclaration//769193423">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">chnn-library</a>/<a href="../index.html">we.rashchenko.neurons</a>/<a href="index.html">Neuron</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>Neuron</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">interface <a href="index.html">Neuron</a> : <a href="../../we.rashchenko.base/-activity/index.html">Activity</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The main element of the <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a>. <a href="../../we.rashchenko.networks.builders/-evolution/index.html">Evolution</a> is targeted to find the fittest <a href="index.html">Neuron</a> where the fit function is collaborative <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a> from other Neurons. Implementing that interface keep in mind that any implementation is valid, but the ones targeted on increasing incoming <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a> (by &quot;pleasing&quot; neighbor neurons) have more chances to survive during <a href="../../we.rashchenko.networks.builders/-evolution/index.html">Evolution</a>. Before developing your <a href="index.html">Neuron</a> implementation check <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a> pipeline documentation to understand the order in which <a href="index.html">Neuron</a> function is called. Note that documentation for the <a href="index.html">Neuron</a> considers that <a href="../../we.rashchenko.networks/-stochastic-neural-network/index.html">StochasticNeuralNetwork</a> or <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a> with similar rules (optimized for sparse activations) used. Examples of such prejudice are that <a href="index.html">Neuron</a> is touched until the first activation or that <a href="update.html">update</a> is called after the <a href="touch.html">touch</a>. We use that assumption because <a href="../../we.rashchenko.networks/-stochastic-neural-network/index.html">StochasticNeuralNetwork</a> is the only implementation of the <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a> so far and to help participants of the ChNN contest to implement effective <a href="index.html">Neuron</a> for <a href="../../we.rashchenko.networks/-stochastic-neural-network/index.html">StochasticNeuralNetwork</a>. But if you are going to use the different <a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a> and think that such assumptions should not be in the documentation please open an issue to discuss that.</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-412694754%2FFunctions%2F769193423" anchor-label="forgetSource" id="-412694754%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="forget-source.html">forgetSource</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-412694754%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">abstract fun <a href="forget-source.html">forgetSource</a>(sourceId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="-412694754%2FFunctions%2F769193423" anchor-label="forgetSource" id="-412694754%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-412694754%2FFunctions%2F769193423" anchor-label="forgetSource" id="-412694754%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><a href="../../we.rashchenko.networks/-neural-network/index.html">NeuralNetwork</a> has decided to break the connection between the current <a href="index.html">Neuron</a> and other <a href="index.html">Neuron</a> with <a href="forget-source.html">sourceId</a>.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2036269707%2FFunctions%2F769193423" anchor-label="getFeedback" id="-2036269707%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="get-feedback.html">getFeedback</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2036269707%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">abstract fun <a href="get-feedback.html">getFeedback</a>(sourceId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>): <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="-2036269707%2FFunctions%2F769193423" anchor-label="getFeedback" id="-2036269707%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-2036269707%2FFunctions%2F769193423" anchor-label="getFeedback" id="-2036269707%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Ask current neuron's opinion about the neighbor <a href="index.html">Neuron</a> with <a href="get-feedback.html">sourceId</a>.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1604868683%2FFunctions%2F769193423" anchor-label="touch" id="1604868683%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="touch.html">touch</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1604868683%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">abstract fun <a href="touch.html">touch</a>(sourceId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, timeStep: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="1604868683%2FFunctions%2F769193423" anchor-label="touch" id="1604868683%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="1604868683%2FFunctions%2F769193423" anchor-label="touch" id="1604868683%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>If <a href="touch.html">touch</a> is called for that <a href="index.html">Neuron</a> it means that an incoming signal from another <a href="index.html">Neuron</a> (which is active) is received.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-227244877%2FFunctions%2F769193423" anchor-label="update" id="-227244877%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="update.html">update</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-227244877%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">abstract fun <a href="update.html">update</a>(feedback: <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a>, timeStep: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="-227244877%2FFunctions%2F769193423" anchor-label="update" id="-227244877%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="brief "><a data-name="-227244877%2FFunctions%2F769193423" anchor-label="update" id="-227244877%2FFunctions%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Notifying the current <a href="index.html">Neuron</a> about what <a href="../../we.rashchenko.base/-feedback/index.html">Feedback</a> it has.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="1908443362%2FProperties%2F769193423" anchor-label="active" id="1908443362%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="index.html#1908443362%2FProperties%2F769193423">active</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1908443362%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><a data-name="1908443362%2FProperties%2F769193423" anchor-label="active" id="1908443362%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a><div class="symbol monospace">abstract val <a href="index.html#1908443362%2FProperties%2F769193423">active</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1908443362%2FProperties%2F769193423" anchor-label="active" id="1908443362%2FProperties%2F769193423" data-filterable-set=":dokkaHtml/main"></a>Is instance active (excited) or not.</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Inheritors</h2>
+              <div class="table" data-togglable="Inheritors"><a data-name="-1030718647%2FInheritors%2F769193423" anchor-label="ControlledNeuron" id="-1030718647%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-controlled-neuron/index.html">ControlledNeuron</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1030718647%2FInheritors%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="759595156%2FInheritors%2F769193423" anchor-label="InputNeuron" id="759595156%2FInheritors%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../we.rashchenko.neurons.inputs/-input-neuron/index.html">InputNeuron</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="759595156%2FInheritors%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

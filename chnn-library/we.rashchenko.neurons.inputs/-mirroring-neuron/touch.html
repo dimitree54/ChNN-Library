@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>touch</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script>  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn"><a href="../../../index.html">
+          <div id="logo"></div>
+        </a>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+<script type="text/javascript" src="../../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="chnn-library::we.rashchenko.neurons.inputs/MirroringNeuron/touch/#kotlin.Int#kotlin.Long/PointingToDeclaration//769193423">
+          <div class="navigation-wrapper" id="navigation-wrapper">
+            <div class="breadcrumbs"><a href="../../../index.html">chnn-library</a>/<a href="../index.html">we.rashchenko.neurons.inputs</a>/<a href="index.html">MirroringNeuron</a>/<a href="touch.html">touch</a></div>
+            <div class="pull-right d-flex">
+              <div id="searchBar"></div>
+            </div>
+          </div>
+          <div class="cover ">
+            <h1 class="cover"><span>touch</span></h1>
+          </div>
+<div class="divergent-group" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="symbol monospace">open override fun <a href="touch.html">touch</a>(sourceId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, timeStep: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<p class="paragraph">If <a href="touch.html">touch</a> is called for that <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> it means that an incoming signal from another <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> (which is active) is received. On <a href="touch.html">touch</a>, current <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> can either continue that activity propagation by also becoming <a href="active.html">active</a> or stay not active. Note that for CPU efficiency if the <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> is already <a href="active.html">active</a> it will not receive touches anymore on that <a href="touch.html">timeStep</a>. In other words, we keep touching the <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> only until the first activation.</p><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">sourceId</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">The nickname of one of the neighboring neurons that was <a href="active.html">active</a> on the previous <a href="touch.html">timeStep</a> and now spreads that activity by <a href="touch.html">touch</a>ing all neighbors. The type of source <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> is unknown because of privacy, so only anonymous integer id received. Note that the set of neighbours of the current Neuron may change in time (NeuralNetwork controls it). So if touch from some <a href="touch.html">sourceId</a> received there probably will be more touches from that <a href="touch.html">sourceId</a> in the future (until <a href="forget-source.html">forgetSource</a> called for that id). So, if your <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> behavior is stateful you may want to save some info between touches.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">timeStep</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">That is NeuralNetwork time stamp. Because of CPU efficiency it may happen that for some neurons no functions called on some time steps. Consider that developing your <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a>. That parameter introduced for <a href="../../we.rashchenko.neurons/-neuron/index.html">Neuron</a> to understand how much time left since last touch or between touch and update.</p></div></div></div></div></div></div></div></div></div></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
