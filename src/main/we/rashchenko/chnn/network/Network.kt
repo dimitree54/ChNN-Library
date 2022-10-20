@@ -25,6 +25,10 @@ open class Network<ActivationType, FeedbackType> {
         nodeIds.remove(node)
     }
 
+    fun getNode(id: Int): Node<ActivationType, FeedbackType>? {
+        return nodeIds.inverse()[id]
+    }
+
     protected open fun gatherInputs(node: Node<ActivationType, FeedbackType>): Map<Int, ActivationType> {
         return Graphs.predecessorListOf(graph, node).associateBy({ nodeIds[it]!! }, { it.getActivation() })
     }
