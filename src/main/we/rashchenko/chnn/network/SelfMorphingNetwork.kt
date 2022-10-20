@@ -3,21 +3,17 @@ package we.rashchenko.chnn.network
 import we.rashchenko.chnn.node.Node
 
 class SelfMorphingNetwork<ActivationType, FeedbackType>(
-    connectionsManagerBuilder: ConnectionsAdvisorBuilder<ActivationType, FeedbackType>
+    private val connectionsAdvisor: ConnectionsAdvisor<ActivationType, FeedbackType>
 ) : Network<ActivationType, FeedbackType>() {
-    private val connectionsManager = connectionsManagerBuilder.build(graph)
     private fun addInput(
         node: Node<ActivationType, FeedbackType>,
         extraInput: Node<ActivationType, FeedbackType>
     ) {
         if (extraInput !in nodeIds) {
-            val inputsForNewNode = connectionsManager.requestConnectionsForNewNode()
-            if (inputsForNewNode.isEmpty()){
-                return
-            }
+            val inputForNewNode = connectionsAdvisor.requestConnectionsForNewNode() ?: return
             nodeIds[extraInput] = getNextId()
             graph.addVertex(extraInput)
-            inputsForNewNode.forEach { addInput(extraInput, it) }
+            addInput(extraInput, inputForNewNode)
         }
         node.addInput(nodeIds[extraInput]!!)
         graph.addEdge(extraInput, node)
@@ -37,14 +33,12 @@ class SelfMorphingNetwork<ActivationType, FeedbackType>(
     }
 
     private fun morph(node: Node<ActivationType, FeedbackType>) {
-        if (node.isExtraInputRequested()) {
-            val extraInputs = connectionsManager.requestExtraConnection(node)
-            extraInputs.forEach { addInput(node, it) }
+        if (node.isExtraInputRequested) {
+            connectionsAdvisor.requestExtraConnection(node)?.also { addInput(node, it) }
         }
-        node.inputsRemoveRequested().forEach { removeNodeId ->
+        node.inputsRemoveRequested.forEach { removeNodeId ->
             nodeIds.inverse()[removeNodeId]?.also { removeNode ->
-                val drop = connectionsManager.requestDropConnection(node, removeNode)
-                if (drop) {
+                if (connectionsAdvisor.requestDropConnection(node, removeNode)) {
                     removeInput(node, removeNode)
                 }
             }

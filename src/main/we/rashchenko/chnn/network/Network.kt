@@ -7,7 +7,7 @@ import org.jgrapht.graph.DefaultEdge
 import we.rashchenko.chnn.node.Node
 
 open class Network<ActivationType, FeedbackType> {
-    protected val graph = DefaultDirectedGraph<Node<ActivationType, FeedbackType>, DefaultEdge>(DefaultEdge::class.java)
+    val graph = DefaultDirectedGraph<Node<ActivationType, FeedbackType>, DefaultEdge>(DefaultEdge::class.java)
     protected val nodeIds: HashBiMap<Node<ActivationType, FeedbackType>, Int> =
         HashBiMap.create<Node<ActivationType, FeedbackType>, Int>()
     private var lastId = 0
@@ -30,7 +30,7 @@ open class Network<ActivationType, FeedbackType> {
     }
 
     protected open fun gatherInputs(node: Node<ActivationType, FeedbackType>): Map<Int, ActivationType> {
-        return Graphs.predecessorListOf(graph, node).associateBy({ nodeIds[it]!! }, { it.getActivation() })
+        return Graphs.predecessorListOf(graph, node).associateBy({ nodeIds[it]!! }, { it.activity })
     }
 
     fun gatherInputs(nodeId: Int): Map<Int, ActivationType> {
@@ -38,7 +38,7 @@ open class Network<ActivationType, FeedbackType> {
     }
 
     protected open fun gatherFeedbacks(node: Node<ActivationType, FeedbackType>): List<FeedbackType> {
-        return Graphs.successorListOf(graph, node).mapNotNull { it.getFeedbacks()[nodeIds[node]!!] }
+        return Graphs.successorListOf(graph, node).mapNotNull { it.feedbacks[nodeIds[node]!!] }
     }
 
     fun gatherFeedbacks(nodeId: Int): List<FeedbackType> {
@@ -59,11 +59,11 @@ open class Network<ActivationType, FeedbackType> {
     }
 
     fun getActivation(nodeId: Int): ActivationType {
-        return nodeIds.inverse()[nodeId]!!.getActivation()
+        return nodeIds.inverse()[nodeId]!!.activity
     }
 
     fun getFeedbacks(nodeId: Int): Map<Int, FeedbackType> {
-        return nodeIds.inverse()[nodeId]!!.getFeedbacks()
+        return nodeIds.inverse()[nodeId]!!.feedbacks
     }
 
     fun getAllIds(): Set<Int> {

@@ -1,6 +1,6 @@
 package we.rashchenko.chnn.node
 
 interface SelfConnectable {
-    fun isExtraInputRequested(): Boolean
-    fun inputsRemoveRequested(): List<Int>
+    val isExtraInputRequested: Boolean
+    val inputsRemoveRequested: List<Int>
 }
