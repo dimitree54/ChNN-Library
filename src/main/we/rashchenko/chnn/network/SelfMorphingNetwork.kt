@@ -11,8 +11,13 @@ class SelfMorphingNetwork<ActivationType, FeedbackType>(
         extraInput: Node<ActivationType, FeedbackType>
     ) {
         if (extraInput !in nodeIds) {
+            val inputsForNewNode = connectionsManager.requestConnectionsForNewNode()
+            if (inputsForNewNode.isEmpty()){
+                return
+            }
             nodeIds[extraInput] = getNextId()
             graph.addVertex(extraInput)
+            inputsForNewNode.forEach { addInput(extraInput, it) }
         }
         node.addInput(nodeIds[extraInput]!!)
         graph.addEdge(extraInput, node)
