@@ -78,10 +78,8 @@ open class Network<ActivationType, FeedbackType> {
         val result = StringBuilder("\n")
         graph.vertexSet().forEach { node ->
             result.append(
-                "${nodeIds[node]}: ${node.getActivation()}, " +
-                        "receiving inputs from ${Graphs.predecessorListOf(graph, node).map { nodeIds[it]!! }}," +
-                        "feedbacks: ${node.getFeedbacks()}," +
-                        "extra inputs requested: ${node.isExtraInputRequested()}\n"
+                "${nodeIds[node]}: ${node}, " +
+                        "inputs from ${Graphs.predecessorListOf(graph, node).map { nodeIds[it]!! }}\n"
             )
         }
         return result.toString()
