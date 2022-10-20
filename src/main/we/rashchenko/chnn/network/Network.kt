@@ -84,4 +84,8 @@ open class Network<ActivationType, FeedbackType> {
         }
         return result.toString()
     }
+
+    fun update() {
+        graph.vertexSet().forEach { it.update() }
+    }
 }
