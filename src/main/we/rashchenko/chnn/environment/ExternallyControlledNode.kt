@@ -10,6 +10,8 @@ abstract class ExternallyControlledNode<ActivationType, FeedbackType>(
 
     override val activity: ActivationType
         get() = externalActivity ?: baseNode.activity
+    val baseActivity: ActivationType
+        get() = baseNode.activity
 
     override fun reportFeedbacks(feedbacks: List<FeedbackType>) {
         getExternalFeedback()?.let { baseNode.reportFeedbacks(listOf(it)) } ?: baseNode.reportFeedbacks(feedbacks)
