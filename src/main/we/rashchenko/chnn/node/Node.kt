@@ -1,6 +1,7 @@
 package we.rashchenko.chnn.node
 
-interface Node<ActivationType, FeedbackType>: FeedbackProvider<FeedbackType>, SelfConnectable {
+interface Node<ActivationType, FeedbackType, ConnectionRequestType>: FeedbackProvider<FeedbackType>, SelfConnectable<ConnectionRequestType> {
+    val generation: Int
     val activity: ActivationType
     fun touch(inputs: Map<Int, ActivationType>)
     fun update()
