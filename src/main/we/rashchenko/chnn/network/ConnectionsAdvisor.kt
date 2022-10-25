@@ -2,15 +2,19 @@ package we.rashchenko.chnn.network
 
 import we.rashchenko.chnn.node.Node
 
-interface ConnectionsAdvisor<ActivationType, FeedbackType> {
-    fun requestConnectionsForNewNode(): Node<ActivationType, FeedbackType>?
+interface ConnectionsAdvisor<ActivationType, FeedbackType, ConnectionRequestType> {
+    fun requestConnectionsForNewNode(
+        connectionRequest: ConnectionRequestType,
+        requestingNode: Node<ActivationType, FeedbackType, ConnectionRequestType>
+    ): Node<ActivationType, FeedbackType, ConnectionRequestType>?
 
     fun requestExtraConnection(
-        requestingNode: Node<ActivationType, FeedbackType>
-    ): Node<ActivationType, FeedbackType>?
+        connectionRequest: ConnectionRequestType,
+        requestingNode: Node<ActivationType, FeedbackType, ConnectionRequestType>
+    ): Node<ActivationType, FeedbackType, ConnectionRequestType>?
 
     fun requestDropConnection(
-        requestingNode: Node<ActivationType, FeedbackType>,
-        connectedNode: Node<ActivationType, FeedbackType>
+        requestingNode: Node<ActivationType, FeedbackType, ConnectionRequestType>,
+        connectedNode: Node<ActivationType, FeedbackType, ConnectionRequestType>
     ): Boolean
 }

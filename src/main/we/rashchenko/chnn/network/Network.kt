@@ -6,30 +6,30 @@ import org.jgrapht.graph.DefaultDirectedGraph
 import org.jgrapht.graph.DefaultEdge
 import we.rashchenko.chnn.node.Node
 
-open class Network<ActivationType, FeedbackType> {
-    val graph = DefaultDirectedGraph<Node<ActivationType, FeedbackType>, DefaultEdge>(DefaultEdge::class.java)
-    protected val nodeIds: HashBiMap<Node<ActivationType, FeedbackType>, Int> =
-        HashBiMap.create<Node<ActivationType, FeedbackType>, Int>()
+open class Network<ActivationType, FeedbackType, ConnectionRequestType> {
+    val graph = DefaultDirectedGraph<Node<ActivationType, FeedbackType, ConnectionRequestType>, DefaultEdge>(DefaultEdge::class.java)
+    protected val nodeIds: HashBiMap<Node<ActivationType, FeedbackType, ConnectionRequestType>, Int> =
+        HashBiMap.create<Node<ActivationType, FeedbackType, ConnectionRequestType>, Int>()
     private var lastId = 0
     protected fun getNextId(): Int {
         return lastId++
     }
 
-    fun addNode(node: Node<ActivationType, FeedbackType>) {
+    fun addNode(node: Node<ActivationType, FeedbackType, ConnectionRequestType>) {
         graph.addVertex(node)
         nodeIds[node] = getNextId()
     }
 
-    fun removeNode(node: Node<ActivationType, FeedbackType>) {
+    fun removeNode(node: Node<ActivationType, FeedbackType, ConnectionRequestType>) {
         graph.removeVertex(node)
         nodeIds.remove(node)
     }
 
-    fun getNode(id: Int): Node<ActivationType, FeedbackType>? {
+    fun getNode(id: Int): Node<ActivationType, FeedbackType, ConnectionRequestType>? {
         return nodeIds.inverse()[id]
     }
 
-    protected open fun gatherInputs(node: Node<ActivationType, FeedbackType>): Map<Int, ActivationType> {
+    protected open fun gatherInputs(node: Node<ActivationType, FeedbackType, ConnectionRequestType>): Map<Int, ActivationType> {
         return Graphs.predecessorListOf(graph, node).associateBy({ nodeIds[it]!! }, { it.activity })
     }
 
@@ -37,7 +37,7 @@ open class Network<ActivationType, FeedbackType> {
         return gatherInputs(nodeIds.inverse()[nodeId]!!)
     }
 
-    protected open fun gatherFeedbacks(node: Node<ActivationType, FeedbackType>): List<FeedbackType> {
+    protected open fun gatherFeedbacks(node: Node<ActivationType, FeedbackType, ConnectionRequestType>): List<FeedbackType> {
         return Graphs.successorListOf(graph, node).mapNotNull { it.feedbacks[nodeIds[node]!!] }
     }
 
@@ -46,7 +46,7 @@ open class Network<ActivationType, FeedbackType> {
     }
 
     protected open fun touch(
-        node: Node<ActivationType, FeedbackType>,
+        node: Node<ActivationType, FeedbackType, ConnectionRequestType>,
         feedbacks: List<FeedbackType>,
         inputs: Map<Int, ActivationType>
     ) {

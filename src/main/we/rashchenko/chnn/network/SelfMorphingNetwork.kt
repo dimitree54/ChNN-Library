@@ -2,26 +2,27 @@ package we.rashchenko.chnn.network
 
 import we.rashchenko.chnn.node.Node
 
-class SelfMorphingNetwork<ActivationType, FeedbackType>(
-    private val connectionsAdvisor: ConnectionsAdvisor<ActivationType, FeedbackType>
-) : Network<ActivationType, FeedbackType>() {
+class SelfMorphingNetwork<ActivationType, FeedbackType, ConnectionRequestType>(
+    private val connectionsAdvisor: ConnectionsAdvisor<ActivationType, FeedbackType, ConnectionRequestType>,
+) : Network<ActivationType, FeedbackType, ConnectionRequestType>() {
     private fun addInput(
-        node: Node<ActivationType, FeedbackType>,
-        extraInput: Node<ActivationType, FeedbackType>
+        request: ConnectionRequestType,
+        node: Node<ActivationType, FeedbackType, ConnectionRequestType>,
+        extraInput: Node<ActivationType, FeedbackType, ConnectionRequestType>,
     ) {
         if (extraInput !in nodeIds) {
-            val inputForNewNode = connectionsAdvisor.requestConnectionsForNewNode() ?: return
+            val inputForNewNode = connectionsAdvisor.requestConnectionsForNewNode(request, extraInput) ?: return
             nodeIds[extraInput] = getNextId()
             graph.addVertex(extraInput)
-            addInput(extraInput, inputForNewNode)
+            addInput(request, extraInput, inputForNewNode)
         }
         node.addInput(nodeIds[extraInput]!!)
         graph.addEdge(extraInput, node)
     }
 
     private fun removeInput(
-        node: Node<ActivationType, FeedbackType>,
-        removeNode: Node<ActivationType, FeedbackType>
+        node: Node<ActivationType, FeedbackType, ConnectionRequestType>,
+        removeNode: Node<ActivationType, FeedbackType, ConnectionRequestType>,
     ) {
         val removeNodeId = nodeIds[removeNode]!!
         node.removeInput(removeNodeId)
@@ -32,11 +33,11 @@ class SelfMorphingNetwork<ActivationType, FeedbackType>(
         }
     }
 
-    private fun morph(node: Node<ActivationType, FeedbackType>) {
-        if (node.isExtraInputRequested) {
-            connectionsAdvisor.requestExtraConnection(node)?.also { addInput(node, it) }
+    private fun morph(node: Node<ActivationType, FeedbackType, ConnectionRequestType>) {
+        node.extraInputRequest?.let { request ->
+            connectionsAdvisor.requestExtraConnection(request, node)?.also { addInput(request, node, it) }
         }
-        node.inputsRemoveRequested.forEach { removeNodeId ->
+        node.inputsRemoveRequest.forEach { removeNodeId ->
             nodeIds.inverse()[removeNodeId]?.also { removeNode ->
                 if (connectionsAdvisor.requestDropConnection(node, removeNode)) {
                     removeInput(node, removeNode)
@@ -46,9 +47,9 @@ class SelfMorphingNetwork<ActivationType, FeedbackType>(
     }
 
     override fun touch(
-        node: Node<ActivationType, FeedbackType>,
+        node: Node<ActivationType, FeedbackType, ConnectionRequestType>,
         feedbacks: List<FeedbackType>,
-        inputs: Map<Int, ActivationType>
+        inputs: Map<Int, ActivationType>,
     ) {
         super.touch(node, feedbacks, inputs)
         morph(node)

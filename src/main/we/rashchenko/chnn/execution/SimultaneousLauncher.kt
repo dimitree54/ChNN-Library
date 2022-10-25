@@ -4,10 +4,10 @@ import we.rashchenko.chnn.environment.Environment
 import we.rashchenko.chnn.environment.ExternallyControlledNode
 import we.rashchenko.chnn.network.Network
 
-class SimultaneousLauncher<ActivationType, FeedbackType>(
-    private val network: Network<ActivationType, FeedbackType>,
+class SimultaneousLauncher<ActivationType, FeedbackType, ConnectionRequestType>(
+    private val network: Network<ActivationType, FeedbackType, ConnectionRequestType>,
     private val environment: Environment<ActivationType>,
-    private val connectors: List<ExternallyControlledNode<ActivationType, FeedbackType>>
+    private val connectors: List<ExternallyControlledNode<ActivationType, FeedbackType, ConnectionRequestType>>
 ) {
 
     init {

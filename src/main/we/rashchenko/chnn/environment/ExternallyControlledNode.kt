@@ -2,10 +2,10 @@ package we.rashchenko.chnn.environment
 
 import we.rashchenko.chnn.node.Node
 
-abstract class ExternallyControlledNode<ActivationType, FeedbackType>(
-    protected val baseNode: Node<ActivationType, FeedbackType>
+abstract class ExternallyControlledNode<ActivationType, FeedbackType, ConnectionRequestType>(
+    protected val baseNode: Node<ActivationType, FeedbackType, ConnectionRequestType>
 ) :
-    Node<ActivationType, FeedbackType> by baseNode {
+    Node<ActivationType, FeedbackType, ConnectionRequestType> by baseNode {
     abstract var externalActivity: ActivationType?
 
     override val activity: ActivationType
