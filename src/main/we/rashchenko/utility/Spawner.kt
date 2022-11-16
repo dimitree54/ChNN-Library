@@ -1,5 +1,5 @@
 package we.rashchenko.utility
 
-interface Spawner<RequestType, SpawnType> {
-    fun spawn(request: RequestType): SpawnType
+interface Spawner<SpawnRequestType, SpawnType> {
+    fun spawn(request: SpawnRequestType): SpawnType
 }
