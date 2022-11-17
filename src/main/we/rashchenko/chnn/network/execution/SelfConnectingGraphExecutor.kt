@@ -9,7 +9,7 @@ class SmartNeuronSelfConnectionGraphExecutor<ActivationType, FeedbackType, Conne
     private val neuralGraph: MutableAnonymousGraph<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
     private val connectionsAdvisor: ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
     private val nodesSpawner: Spawner<SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
-) : GraphExecutor {
+) : Executor {
     private fun removeInput(
         requestingId: Int,
         inputIdToRemove: Int,

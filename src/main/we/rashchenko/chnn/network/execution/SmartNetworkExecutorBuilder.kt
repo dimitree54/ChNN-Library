@@ -1,8 +1,8 @@
-package we.rashchenko.chnn.network
+package we.rashchenko.chnn.network.execution
 
 import we.rashchenko.chnn.environment.Environment
 import we.rashchenko.chnn.environment.EnvironmentExecutor
-import we.rashchenko.chnn.network.execution.*
+import we.rashchenko.chnn.network.ConnectionsAdvisor
 import we.rashchenko.chnn.node.Activity
 import we.rashchenko.chnn.node.SmartNeuron
 import we.rashchenko.utility.Spawner
@@ -17,7 +17,7 @@ class SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionReques
     val neuralGraph: AnonymousGraph<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>
         get() = _neuralGraph
 
-    private val executors = mutableListOf<GraphExecutor>()
+    private val executors = mutableListOf<Executor>()
 
     fun createNetwork(
         anonymizer: BiAnonymizer<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>> = DefaultBiAnonymizer(
@@ -61,7 +61,7 @@ class SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionReques
         return this
     }
 
-    fun build(): GraphExecutor {
-        return ComplexGraphExecutor(*executors.toTypedArray())
+    fun build(): Executor {
+        return ComplexExecutor(*executors.toTypedArray())
     }
 }

@@ -5,7 +5,7 @@ import we.rashchenko.utility.graph.AnonymousGraph
 
 abstract class CollaborativeGraphExecutor<FeedbackType>(
     protected val neuralGraph: AnonymousGraph<CollaborativeUnit<FeedbackType>>,
-) : GraphExecutor {
+) : Executor {
     protected fun gatherFeedbacks(id: Int) =
         neuralGraph.getListenersOf(id).mapNotNull { neuralGraph.deAnonymize(it).feedbacks[id] }
 

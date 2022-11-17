@@ -5,7 +5,7 @@ import we.rashchenko.utility.graph.AnonymousGraph
 
 abstract class NeuralGraphExecutor<ActivationType>(
     protected val neuralGraph: AnonymousGraph<Neuron<ActivationType>>,
-) : GraphExecutor {
+) : Executor {
     protected fun gatherInputs(id: Int) =
         neuralGraph.getInputsOf(id).associateWith { neuralGraph.deAnonymize(it).activity }
 
