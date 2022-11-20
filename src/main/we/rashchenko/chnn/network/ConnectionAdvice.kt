@@ -1,6 +1,6 @@
 package we.rashchenko.chnn.network
 
-data class ConnectionAdvice<ConnectionRequestType, SpawnRequestType, NodeType>(
+data class ConnectionAdvice<ConnectionRequestType, SpawnRequestType>(
     val newNodeRequests: Pair<ConnectionRequestType, SpawnRequestType>?,
-    val addInputFrom: NodeType?,
+    val addInputFrom: Int?,
 )

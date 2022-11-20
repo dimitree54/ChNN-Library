@@ -53,7 +53,7 @@ class SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionReques
     }
 
     fun addSelfMorphingExecutor(
-        connectionsAdvisor: ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
+        connectionsAdvisor: ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType>,
         nodesSpawner: Spawner<SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
     ): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType> {
         val selfMorphingExecutor = SmartNeuronSelfConnectionGraphExecutor(_neuralGraph, connectionsAdvisor, nodesSpawner)

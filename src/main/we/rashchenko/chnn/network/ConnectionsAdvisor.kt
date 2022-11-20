@@ -1,14 +1,14 @@
 package we.rashchenko.chnn.network
 
-interface ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType, NodeType> {
+interface ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType> {
     fun requestExtraInput(
         connectionRequest: ConnectionRequestType,
-        requestingNode: NodeType,
-    ): ConnectionAdvice<ConnectionRequestType, SpawnRequestType, NodeType>
+        requestingId: Int,
+    ): ConnectionAdvice<ConnectionRequestType, SpawnRequestType>
 
     fun requestRemoveInput(
-        requestingNode: NodeType,
-        connectedNode: NodeType,
+        requestingId: Int,
+        connectedId: Int,
     ): Boolean
 }
 

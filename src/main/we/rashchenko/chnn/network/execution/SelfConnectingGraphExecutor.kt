@@ -7,7 +7,7 @@ import we.rashchenko.utility.graph.MutableAnonymousGraph
 
 class SmartNeuronSelfConnectionGraphExecutor<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType>(
     private val neuralGraph: MutableAnonymousGraph<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
-    private val connectionsAdvisor: ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
+    private val connectionsAdvisor: ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType>,
     private val nodesSpawner: Spawner<SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
 ) : Executor {
     private fun removeInput(
@@ -22,9 +22,8 @@ class SmartNeuronSelfConnectionGraphExecutor<ActivationType, FeedbackType, Conne
     }
 
     private fun removeInputsIfRequested(id: Int) {
-        val requestingNode = neuralGraph.deAnonymize(id)
-        requestingNode.inputsRemoveRequest.forEach {
-            if (connectionsAdvisor.requestRemoveInput(requestingNode, neuralGraph.deAnonymize(it))) {
+        neuralGraph.deAnonymize(id).inputsRemoveRequest.forEach {
+            if (connectionsAdvisor.requestRemoveInput(id, it)) {
                 removeInput(id, it)
             }
         }
@@ -48,11 +47,11 @@ class SmartNeuronSelfConnectionGraphExecutor<ActivationType, FeedbackType, Conne
     }
 
     private fun addInput(id: Int, request: ConnectionRequestType): Boolean {
-        val advice = connectionsAdvisor.requestExtraInput(request, neuralGraph.deAnonymize(id))
+        val advice = connectionsAdvisor.requestExtraInput(request, id)
         if (advice.newNodeRequests != null) {
             return spawnAndConnectToNode(id, advice.newNodeRequests.first, advice.newNodeRequests.second)
         } else if (advice.addInputFrom != null) {
-            neuralGraph.wire(id, neuralGraph.anonymize(advice.addInputFrom))
+            neuralGraph.wire(id, advice.addInputFrom)
             return true
         }
         return false
