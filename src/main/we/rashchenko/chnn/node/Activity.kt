@@ -1,5 +1,5 @@
 package we.rashchenko.chnn.node
 
-interface Activity<ActivationType> {
+interface Activity<out ActivationType> {
     val activity: ActivationType
 }

@@ -12,7 +12,7 @@ import we.rashchenko.utility.id.BiAnonymizer
 import we.rashchenko.utility.id.DefaultBiAnonymizer
 import we.rashchenko.utility.id.SequentialIdGenerator
 
-class SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType> {
+class SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType> {
     private lateinit var _neuralGraph: DefaultMutableAnonymousGraph<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>
     val neuralGraph: AnonymousGraph<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>
         get() = _neuralGraph
@@ -23,15 +23,15 @@ class SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionReques
         anonymizer: BiAnonymizer<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>> = DefaultBiAnonymizer(
             SequentialIdGenerator()
         ),
-    ): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType> {
+    ): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType> {
         _neuralGraph = DefaultMutableAnonymousGraph(anonymizer)
         return this
     }
 
-    fun addEnvironment(
-        environment: Environment<ActivationType>,
-        connectorsSpawner: Spawner<Activity<ActivationType?>, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
-    ): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType> {
+    fun <EnvironmentActivationType>addEnvironment(
+        environment: Environment<EnvironmentActivationType>,
+        connectorsSpawner: Spawner<Activity<EnvironmentActivationType>, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
+    ): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType> {
         environment.allNodes.forEach { environmentNode ->
             val connectorNode = connectorsSpawner.spawn(environmentNode)
             _neuralGraph.add(connectorNode)
@@ -40,22 +40,22 @@ class SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionReques
         return this
     }
 
-    fun addFeedForwardExecutor(): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType> {
+    fun addFeedForwardExecutor(): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType> {
         val feedForwardExecutor = SimultaneousNeuralGraphExecutor(_neuralGraph)
         executors.add(feedForwardExecutor)
         return this
     }
 
-    fun addBackPropagationExecutor(): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType> {
+    fun addBackPropagationExecutor(): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType> {
         val feedbackExecutor = SimultaneousCollaborativeGraphExecutor(_neuralGraph)
         executors.add(feedbackExecutor)
         return this
     }
 
-    fun addSelfMorphingExecutor(
+    fun <SpawnRequestType>addSelfMorphingExecutor(
         connectionsAdvisor: ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType>,
         nodesSpawner: Spawner<SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
-    ): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType> {
+    ): SmartNetworkExecutorBuilder<ActivationType, FeedbackType, ConnectionRequestType> {
         val selfMorphingExecutor = SmartNeuronSelfConnectionGraphExecutor(_neuralGraph, connectionsAdvisor, nodesSpawner)
         executors.add(selfMorphingExecutor)
         return this
