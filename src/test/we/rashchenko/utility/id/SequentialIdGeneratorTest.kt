@@ -8,6 +8,7 @@ internal class SequentialIdGeneratorTest {
 
     @Test
     fun testUniqueness() {
+        // todo move that test to general interface test
         val numExamples = 1000000
         val generator = SequentialIdGenerator()
         val uniqueIds = (0 until numExamples).map { generator.next }
