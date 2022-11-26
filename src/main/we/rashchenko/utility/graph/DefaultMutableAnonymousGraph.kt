@@ -38,8 +38,11 @@ class DefaultMutableAnonymousGraph<NodeType>(
         idsGraph.removeEdge(from, to)
     }
 
-    override val allNodes: Collection<NodeType> = nodesGraph.vertexSet()
-    override val allIds: Collection<Int> = idsGraph.vertexSet()
+    override val allNodes: Collection<NodeType>
+        get() = nodesGraph.vertexSet().toSet()
+    override val allIds: Collection<Int>
+        get() = idsGraph.vertexSet().toSet()
+
     override fun deAnonymize(id: Int): NodeType = biAnonymizer.deAnonymize(id)
     override fun anonymize(node: NodeType): Int = biAnonymizer.anonymize(node)
     override fun getInputsOf(id: Int): Collection<Int> = Graphs.predecessorListOf(idsGraph, id)
