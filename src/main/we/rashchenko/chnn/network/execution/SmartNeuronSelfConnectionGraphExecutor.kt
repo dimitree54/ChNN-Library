@@ -38,7 +38,7 @@ class SmartNeuronSelfConnectionGraphExecutor<ConnectionRequestType, SpawnRequest
         val newNodeId = neuralGraph.add(newNode)
         neuralGraph.add(newNode)
         return if (addInput(newNodeId, newNodeConnectionRequest)) {
-            neuralGraph.wire(id, newNodeId)
+            neuralGraph.wire(newNodeId, id)
             true
         } else {
             neuralGraph.remove(newNodeId)
@@ -51,7 +51,7 @@ class SmartNeuronSelfConnectionGraphExecutor<ConnectionRequestType, SpawnRequest
         if (advice.newNodeRequests != null) {
             return spawnAndConnectToNode(id, advice.newNodeRequests.first, advice.newNodeRequests.second)
         } else if (advice.addInputFrom != null) {
-            neuralGraph.wire(id, advice.addInputFrom)
+            neuralGraph.wire(advice.addInputFrom, id)
             return true
         }
         return false
