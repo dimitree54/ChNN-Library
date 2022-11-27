@@ -5,10 +5,10 @@ import we.rashchenko.chnn.node.SmartNeuron
 import we.rashchenko.utility.Spawner
 import we.rashchenko.utility.graph.MutableAnonymousGraph
 
-class SmartNeuronSelfConnectionGraphExecutor<ActivationType, FeedbackType, ConnectionRequestType, SpawnRequestType>(
-    private val neuralGraph: MutableAnonymousGraph<SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
+class SmartNeuronSelfConnectionGraphExecutor<ConnectionRequestType, SpawnRequestType, NodeType: SmartNeuron<*, *, ConnectionRequestType>>(
+    private val neuralGraph: MutableAnonymousGraph<NodeType>,
     private val connectionsAdvisor: ConnectionsAdvisor<ConnectionRequestType, SpawnRequestType>,
-    private val nodesSpawner: Spawner<SpawnRequestType, SmartNeuron<ActivationType, FeedbackType, ConnectionRequestType>>,
+    private val nodesSpawner: Spawner<SpawnRequestType, NodeType>,
 ) : Executor {
     private fun removeInput(
         requestingId: Int,
