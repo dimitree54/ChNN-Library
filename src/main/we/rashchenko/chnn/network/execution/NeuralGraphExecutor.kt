@@ -1,6 +1,6 @@
 package we.rashchenko.chnn.network.execution
 
-import we.rashchenko.chnn.node.Neuron
+import we.rashchenko.chnn.neuron.Neuron
 import we.rashchenko.utility.graph.AnonymousGraph
 
 abstract class NeuralGraphExecutor<ActivationType>(

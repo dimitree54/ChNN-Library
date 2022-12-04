@@ -1,12 +1,12 @@
 package we.rashchenko.chnn.environment
 
-import we.rashchenko.chnn.node.Activity
-import we.rashchenko.chnn.node.SmartNeuron
+import we.rashchenko.chnn.neuron.Activity
+import we.rashchenko.chnn.neuron.BalancingSmartNeuron
 
 abstract class ExternallyControlledNeuron<EnvironmentActivationType, NeuronActivationType, FeedbackType, ConnectionRequestType>(
     private val externalActivity: Activity<EnvironmentActivationType>,
-    private val baseNeuron: SmartNeuron<NeuronActivationType, FeedbackType, ConnectionRequestType>,
-) : SmartNeuron<NeuronActivationType, FeedbackType, ConnectionRequestType> by baseNeuron {
+    private val baseNeuron: BalancingSmartNeuron<NeuronActivationType, FeedbackType, ConnectionRequestType>,
+) : BalancingSmartNeuron<NeuronActivationType, FeedbackType, ConnectionRequestType> by baseNeuron {
 
     override val activity: NeuronActivationType
         get() = fuseExternalActivityIntoNeuron(externalActivity.activity, baseNeuron.activity)

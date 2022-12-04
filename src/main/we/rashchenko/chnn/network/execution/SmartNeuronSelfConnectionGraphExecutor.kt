@@ -1,7 +1,7 @@
 package we.rashchenko.chnn.network.execution
 
 import we.rashchenko.chnn.network.ConnectionsAdvisor
-import we.rashchenko.chnn.node.SmartNeuron
+import we.rashchenko.chnn.neuron.SmartNeuron
 import we.rashchenko.utility.Spawner
 import we.rashchenko.utility.graph.MutableAnonymousGraph
 

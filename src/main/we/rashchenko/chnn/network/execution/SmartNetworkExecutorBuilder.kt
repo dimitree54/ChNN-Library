@@ -3,8 +3,8 @@ package we.rashchenko.chnn.network.execution
 import we.rashchenko.chnn.environment.Environment
 import we.rashchenko.chnn.environment.EnvironmentExecutor
 import we.rashchenko.chnn.network.ConnectionsAdvisor
-import we.rashchenko.chnn.node.Activity
-import we.rashchenko.chnn.node.SmartNeuron
+import we.rashchenko.chnn.neuron.Activity
+import we.rashchenko.chnn.neuron.SmartNeuron
 import we.rashchenko.utility.Spawner
 import we.rashchenko.utility.graph.DefaultMutableAnonymousGraph
 

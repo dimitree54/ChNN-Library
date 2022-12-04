@@ -1,4 +1,4 @@
-package we.rashchenko.chnn.node
+package we.rashchenko.chnn.neuron
 
 interface CollaborativeUnit<FeedbackType> {
     val feedbacks: Map<Int, FeedbackType>

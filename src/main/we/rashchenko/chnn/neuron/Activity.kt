@@ -1,4 +1,4 @@
-package we.rashchenko.chnn.node
+package we.rashchenko.chnn.neuron
 
 interface Activity<out ActivationType> {
     val activity: ActivationType

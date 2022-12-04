@@ -1,4 +1,4 @@
-package we.rashchenko.chnn.node
+package we.rashchenko.chnn.neuron
 
 interface SelfConnectingUnit<ConnectionRequestType> {
     val extraInputRequest: ConnectionRequestType?

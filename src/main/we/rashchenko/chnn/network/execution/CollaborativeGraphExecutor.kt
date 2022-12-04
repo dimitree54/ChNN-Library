@@ -1,6 +1,6 @@
 package we.rashchenko.chnn.network.execution
 
-import we.rashchenko.chnn.node.CollaborativeUnit
+import we.rashchenko.chnn.neuron.CollaborativeUnit
 import we.rashchenko.utility.graph.AnonymousGraph
 
 abstract class CollaborativeGraphExecutor<FeedbackType>(
