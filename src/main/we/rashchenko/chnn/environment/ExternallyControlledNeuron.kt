@@ -23,10 +23,6 @@ abstract class ExternallyControlledNeuron<EnvironmentActivationType, NeuronActiv
         externalActivity: EnvironmentActivationType, neuronActivity: NeuronActivationType,
     ): FeedbackType
 
-    override fun toString(): String {
-        return "$externalActivity ${super.toString()}"
-    }
-
     val externalActivation: EnvironmentActivationType
         get() = externalActivity.activity
 
